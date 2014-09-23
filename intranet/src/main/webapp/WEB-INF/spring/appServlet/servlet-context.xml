@@ -13,6 +13,10 @@
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
+	<resources mapping="/images/**" location="/resources/images/"/>
+	<resources mapping="/css/images/**" location="/resources/images/"/>
+	<resources mapping="/css/**" location="/resources/css/"/>
+	<resources mapping="javascript/**" location="/resources/javascript/"/>
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
@@ -58,5 +62,29 @@
    
   <!-- Activates annotation based transaction management -->
   <tx:annotation-driven transaction-manager="transactionManager"/>
+
+  
+  
+  <!-- Tiles config -->
+  <beans:bean id="viewResolver"
+    class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+    <beans:property name="viewClass">
+        <beans:value>
+            org.springframework.web.servlet.view.tiles2.TilesView
+        </beans:value>
+    </beans:property>
+</beans:bean>
+  
+  <beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+  	<beans:property name="definitions">
+  		<beans:list>
+  			<beans:value>/WEB-INF/tiles-defs/templates.xml</beans:value>
+  		</beans:list>
+  	</beans:property>
+  </beans:bean>
+  
+
+
+    
 	
 </beans:beans>

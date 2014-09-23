@@ -5,5 +5,7 @@ import java.util.List;
 import be.stijn.intranet.maps.Output;
 
 public interface OutputService {
-	public List<Output> findAll();
+	List<Output> findAll();
+	Output getOutput(int nr);
+	List<Output> getFilledPlcDataCommand();
 }

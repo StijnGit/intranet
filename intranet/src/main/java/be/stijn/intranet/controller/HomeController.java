@@ -22,13 +22,10 @@ public class HomeController {
 
 	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
 	public String list(Model model) {
-		List<Output> outputs = outputService.findAll();
+		List<Output> outputs = outputService.getFilledPlcDataCommand();
 		model.addAttribute("outputs", outputs);
 
 		return "home";
 	}
-
-	
-
 
 }

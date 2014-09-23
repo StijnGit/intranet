@@ -1,3 +1,7 @@
 INDEX VERSION 1.127
+/Users/stijncl/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1797985414.index
+/intranet/src/main/java
 /Users/stijncl/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1802857364.index
+/intranet/src/main/java
+/Users/stijncl/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/368591081.index
 /intranet/src/main/java

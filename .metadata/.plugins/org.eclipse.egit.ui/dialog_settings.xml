@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="RepositorySelectionPage.UsedUris">
 		<item value="ssh://stijncl@github.com/StijnGit/intranetV2.git"/>
 	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="StijnGit &lt;stijn_claessens@skynet.be&gt;"/>
+		<item value="stijncl &lt;stijn_claessens@skynet.be&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="StijnGit &lt;stijn_claessens@skynet.be&gt;"/>
+		<item value="stijncl &lt;stijn_claessens@skynet.be&gt;"/>
+	</list>
 	<section name="GitImportWizard">
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="650" key="DIALOG_WIDTH"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		<item value="440" key="DIALOG_HEIGHT"/>
+		<item value="303" key="DIALOG_X_ORIGIN"/>
+		<item value="105" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">
+		<item value="626" key="DIALOG_WIDTH"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		<item value="623" key="DIALOG_HEIGHT"/>
+		<item value="315" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GitCommitMessageComponent">
 	</section>
 </section>

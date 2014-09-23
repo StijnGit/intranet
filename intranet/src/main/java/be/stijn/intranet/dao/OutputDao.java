@@ -6,6 +6,7 @@ import be.stijn.intranet.maps.Output;
 
 public interface OutputDao {
 	
-	public List<Output> findAll();
+	List<Output> findAll();
+	Output findByNr(int nr);
 }
 

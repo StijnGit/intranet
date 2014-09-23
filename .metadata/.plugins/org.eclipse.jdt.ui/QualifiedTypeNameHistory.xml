@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="org.joda.time.DateTime"/>
+<fullyQualifiedTypeName name="PLCCom.authentication"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="PLCCom.eBaudrate"/>
+<fullyQualifiedTypeName name="PLCCom.eSpeed"/>
+<fullyQualifiedTypeName name="PLCCom.ePLCType"/>
+<fullyQualifiedTypeName name="PLCCom.ConnectResult"/>
+<fullyQualifiedTypeName name="PLCCom.ReadRequest"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.command.PlcDataCommand"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.manager.DeviceManager"/>
+<fullyQualifiedTypeName name="PLCCom.eRegion"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Transient"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.service.OutputService"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.client.Client"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.client.WebResource"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.client.ClientResponse"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.GenericEntity"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.client.GenericType"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.maps.Output"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.service.OutputServiceImpl"/>
+</qualifiedTypeNameHistroy>

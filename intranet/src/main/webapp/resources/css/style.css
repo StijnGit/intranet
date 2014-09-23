@@ -1,0 +1,82 @@
+
+html,body {
+	height: 100%;
+	background-image: url("images/background.gif");
+	text-align: center;
+	margin: 0px;
+	font-family: Arial,sans-serif;
+}
+
+.container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	text-align: center;
+	width: 1000px;
+	margin-left: auto ;
+  	margin-right: auto ;
+  	margin-bottom: -136px;
+}
+
+.footer,.push {
+	height: 136px;
+}
+
+.footer {
+	background-image: url("images/huis-footer.gif");
+}
+
+.menubar {
+	background-image: url("images/menu-background.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 161px;
+	margin-top: 20px;
+}
+
+.menu{
+	text-align:left;
+	padding-top: 40px;
+	padding-left: 375px;
+}
+
+.menu a {
+	font-size: 18px;
+	color: #80361F;
+	padding-right: 15px;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	color: #A67262;
+}
+
+.content {
+	margin-top: 50px;
+}
+
+.block {
+	background-image: url("images/content.png");
+	background-repeat: repeat;
+	text-align: center;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.left {
+	text-align: left;
+}
+
+span.title {
+	display: block;
+}
+
+span.description {
+	color: gray;
+}

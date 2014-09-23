@@ -1,0 +1,24 @@
+package be.stijn.intranet.webservice;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import be.stijn.intranet.maps.Output;
+import be.stijn.intranet.service.OutputService;
+import be.stijn.intranet.service.OutputServiceImpl;
+
+@Path("/outputs")
+public class OutputRestService {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Output> getOutputsInJSON() {
+		OutputService outputService = new OutputServiceImpl();
+		return outputService.getFilledPlcDataCommand();
+	}
+
+}

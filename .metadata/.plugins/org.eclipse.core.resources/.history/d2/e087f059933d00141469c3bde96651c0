@@ -1,0 +1,13 @@
+package be.stijn.intranet.controller;
+
+import com.sun.jersey.api.client.Client;
+
+
+
+public class WebservicetestController {
+	
+	public static void main(String[] args) {
+		Client client = Client.create();
+		
+	}
+}

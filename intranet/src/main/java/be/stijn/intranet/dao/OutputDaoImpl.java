@@ -15,9 +15,24 @@ public class OutputDaoImpl implements OutputDao {
 	
 	@Override
 	@SuppressWarnings({ "unchecked"})
-	
 	public List<Output> findAll() {
 		return sessionFactory.getCurrentSession().createQuery("from Output").list();
+	}
+	
+	
+	@Override
+	@SuppressWarnings({ "unchecked"})
+	public Output findByNr(int nr) {
+		List<Output> outputs = sessionFactory.getCurrentSession()
+				.createQuery("from Output where nr = :nr")
+				.setParameter("nr",nr)
+				.list();
+		if(outputs.size() > 1){
+			throw new IllegalArgumentException();
+		}else if(outputs.size() == 0){
+			return null;
+		}
+		return outputs.get(0);
 	}
 
 }

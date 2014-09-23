@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Thu Aug 21 20:46:14 CEST 2014
+#Mon Sep 22 21:51:00 CEST 2014
 org.eclipse.jst.jee.server\:/binary\:/Users/stijncl/.m2/repository/org/springframework/spring-web/4.0.6.RELEASE/spring-web-4.0.6.RELEASE.jar=/Applications/sts-bundle/vfabric-tc-server-developer-2.9.6.RELEASE/base-instance/wtpwebapps/intranet/WEB-INF/lib/spring-web-4.0.6.RELEASE.jar
 org.eclipse.jst.jee.server\:intranet=/Applications/sts-bundle/vfabric-tc-server-developer-2.9.6.RELEASE/base-instance/wtpwebapps/intranet

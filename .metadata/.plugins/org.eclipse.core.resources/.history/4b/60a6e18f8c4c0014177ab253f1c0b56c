@@ -1,0 +1,5 @@
+package be.stijn.intranet.dao;
+
+public class InputDaoImpl {
+
+}

@@ -4,9 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
-
+@XmlRootElement
 @Entity
 @Table(name = "input")
 public class Input{
@@ -16,7 +18,9 @@ public class Input{
 	private int word;
 	private int bit;
 	private int nr;
-
+	@Transient
+	private boolean value;
+	
 	public long getId() {
 		return id;
 	}
@@ -56,5 +60,12 @@ public class Input{
 	public void setNr(int nr) {
 		this.nr = nr;
 	}	
-
+	
+	public boolean getValue() {
+		return value;
+	}
+	
+	public void setValue(boolean value) {
+		this.value = value;
+	}
 }

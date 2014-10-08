@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/StijnGit/intranet.git"/>
 		<item value="ssh://stijncl@github.com/StijnGit/intranetV2.git"/>
 	</list>
 	<list key="CommitDialog.authorValues">

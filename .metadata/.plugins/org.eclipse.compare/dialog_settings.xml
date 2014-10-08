@@ -5,7 +5,7 @@
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 		<item value="690" key="DIALOG_HEIGHT"/>
 		<item value="35" key="DIALOG_X_ORIGIN"/>
-		<item value="-5" key="DIALOG_Y_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="PreviewPatchPage">
 	</section>

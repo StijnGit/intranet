@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import be.stijn.intranet.maps.Output;
-import be.stijn.intranet.service.OutputService;
+import be.stijn.intranet.maps.Input;
+import be.stijn.intranet.service.InputService;
 
 /**
  * Handles requests for the application home page.
@@ -17,14 +17,21 @@ import be.stijn.intranet.service.OutputService;
 @Controller
 public class HomeController {
 
+
+	//private OutputService outputService;
 	@Autowired
-	private OutputService outputService;
+	private InputService inputService;
 
 	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
+//	public String list(Model model) {
+//		List<Output> outputs = outputService.getFilledPlcDataCommand();
+//		model.addAttribute("outputs", outputs);
+//
+//		return "home";
 	public String list(Model model) {
-		List<Output> outputs = outputService.getFilledPlcDataCommand();
-		model.addAttribute("outputs", outputs);
-
+		List<Input> inputs = inputService.getFilledPlcDataCommand();
+		model.addAttribute("inputs", inputs);
+		
 		return "home";
 	}
 

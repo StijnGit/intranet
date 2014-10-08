@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import be.stijn.intranet.command.PlcDataCommand;
 import be.stijn.intranet.maps.Output;
 import be.stijn.intranet.service.OutputService;
 
@@ -19,9 +20,15 @@ public class LightingController {
 
 	@RequestMapping(value = { "/lighting" }, method = RequestMethod.GET)
 	public String list(Model model) {
-		List<Output> outputs = outputService.getFilledPlcDataCommand();
-		model.addAttribute("outputs", outputs);
-
+		
+		PlcDataCommand cmd = new PlcDataCommand();
+		
+		List<Output> output = outputService.getFilledPlcDataCommand();
+		model.addAttribute("output", output);
+		for (Output outp : output ){
+			cmd.addPlcOutputData(outp);
+		}
+		model.addAttribute("command", cmd);
 		return "/lighting";
 	}
 

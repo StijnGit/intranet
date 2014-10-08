@@ -1,0 +1,5 @@
+package be.stijn.intranet.service;
+
+public class InputService {
+
+}

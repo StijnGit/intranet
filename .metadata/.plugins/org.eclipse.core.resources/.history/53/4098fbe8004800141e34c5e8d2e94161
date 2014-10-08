@@ -1,0 +1,245 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+
+<tiles:insertTemplate template="../templates/template.jsp">
+	<tiles:putAttribute name="content" cascade="true">
+		<div class="content">
+			<form:form action="lighting" method="post">
+				<div class="tableLeft">
+					<div class="rounded-corners group">
+						<table>
+							<tr>
+								<th width="200">Gelijkvloers</th>
+								<th width="60">Status</th>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[16].name}"></c:out>
+								</td>								
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[20].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[21].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[22].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[23].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[24].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[25].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[26].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[27].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[28].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[29].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[30].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<c:out value="${output[31].name}"></c:out>	
+								</td>
+								<td>
+									<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<div class="rounded-corners group">
+						<table>
+							<tr>
+								<th width="200">Zolder</th>
+								<th width="60">Status</th>
+							</tr>
+							<tr>
+							<td>
+								<c:out value="${output[13].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[14].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[15].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>	
+						</table>
+					</div>
+				</div>
+				<div class="tableRight">
+				<div class="rounded-corners group">
+				<table>
+						<tr>
+							<th width="200">Eerste verdieping</th>
+							<th width="60">Status</th>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[4].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[5].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[8].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[9].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[10].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[11].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[12].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" value="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<c:out value="${output[17].name}"></c:out>	
+							</td>
+							<td>
+								<form:checkbox path="plcOutputData[16].value" cssClass="slider"/>
+							</td>
+						</tr>
+					</table>
+					</div>
+
+					<br>
+					<input type="submit" value="aanpassen">
+				</div>
+			</form:form>
+		</div>
+		
+	</tiles:putAttribute>
+	<tiles:putAttribute name="footer" cascade="true">
+		<div id="footer">
+			<p>Stijn Claessens 2012 ©</p>
+		</div>
+	</tiles:putAttribute>
+</tiles:insertTemplate>

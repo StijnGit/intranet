@@ -4,13 +4,11 @@
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="org.joda.time.DateTime"/>
 <fullyQualifiedTypeName name="PLCCom.authentication"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="PLCCom.eBaudrate"/>
 <fullyQualifiedTypeName name="PLCCom.eSpeed"/>
 <fullyQualifiedTypeName name="PLCCom.ePLCType"/>
 <fullyQualifiedTypeName name="PLCCom.ConnectResult"/>
 <fullyQualifiedTypeName name="PLCCom.ReadRequest"/>
-<fullyQualifiedTypeName name="be.stijn.intranet.command.PlcDataCommand"/>
 <fullyQualifiedTypeName name="be.stijn.intranet.manager.DeviceManager"/>
 <fullyQualifiedTypeName name="PLCCom.eRegion"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
@@ -30,6 +28,12 @@
 <fullyQualifiedTypeName name="javax.ws.rs.core.GenericEntity"/>
 <fullyQualifiedTypeName name="com.sun.jersey.api.client.GenericType"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="be.stijn.intranet.maps.Output"/>
 <fullyQualifiedTypeName name="be.stijn.intranet.service.OutputServiceImpl"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.command.TestCommand"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.maps.Output"/>
+<fullyQualifiedTypeName name="be.stijn.intranet.command.PlcDataCommand"/>
 </qualifiedTypeNameHistroy>

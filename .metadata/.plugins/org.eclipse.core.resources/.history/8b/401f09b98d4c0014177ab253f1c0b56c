@@ -1,0 +1,32 @@
+package be.stijn.intranet.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import be.stijn.intranet.dao.InputDao;
+import be.stijn.intranet.maps.Input;
+
+public class InputServiceImpl implements InputService{
+	
+	@Autowired
+	private InputDao inputDao;
+
+	@Override
+	public List<Input> findAll() {
+		return inputDao.findAll();
+	}
+
+	@Override
+	public Input getInput(int nr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Input> getFilledPlcDataCommand() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

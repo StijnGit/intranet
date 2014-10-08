@@ -21,7 +21,6 @@ public class OutputServiceImpl implements OutputService {
 	@Transactional
 	public List<Output> findAll() {
 		return outputDao.findAll();
-	
 	}
 	
 	@Override
@@ -29,6 +28,7 @@ public class OutputServiceImpl implements OutputService {
 	public List<Output> getFilledPlcDataCommand(){
 		Output output = new Output();
 	    List<Output> outputs = new ArrayList<Output>();
+
 
 		DeviceManager plc = new DeviceManager();
 		if (plc.connect().HasConnected()) {
@@ -48,7 +48,7 @@ public class OutputServiceImpl implements OutputService {
 		else
 		{
 			//Test data als er geen PLC aanwezig is
-			boolean resOut[] = {true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false} ;
+			boolean resOut[] = {true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false} ;
 			
 			for (int i = 0; i < resOut.length; ++i)
 			{

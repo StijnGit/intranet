@@ -18,13 +18,23 @@
 								<th width="60">Status:</th>
 							</tr>
 							<tr>
-								<td class="btnLeefruimte cursor">Leefruimte:</td>
+								<td class="btnLeefruimte cursor">
+									<c:out value="${input[0].name}"></c:out>
+									<td><form:checkbox path="plcInputData[0].value" cssClass="slider"/></td>
+								</td>
 							</tr>
 							<tr>
-								<td class="btnBadkamer cursor">Badkamer:</td>
+								<td class="btnBadkamer cursor">
+									<c:out value="${input[1].name}"></c:out>
+									<td><form:checkbox path="plcInputData[1].value" cssClass="slider"/></td>
+								</td> 
 							</tr>
 							<tr>
-								<td class="btnZolder cursor">Zolder:</td>
+								<td class="btnZolder cursor">
+									<c:out value="${input[2].name}"></c:out>
+									<td><form:checkbox path="plcInputData[2].value" cssClass="slider"/></td>
+									
+								</td>
 							</tr>
 						</table>
 					</div>
@@ -36,16 +46,28 @@
 								<th width="60">Status:</th>
 							</tr>
 							<tr>
-								<td>Ketel:</td>
+								<td>
+									<c:out value="${output[3].name}"></c:out>
+								</td>
+								<td><form:checkbox path="plcOutputData[3].value" cssClass="slider"/></td>
 							</tr>
 							<tr>
-								<td>Zoneventiel leefruimte:</td>
+								<td>
+									<c:out value="${output[2].name}"></c:out>
+								</td>
+								<td><form:checkbox path="plcOutputData[2].value" cssClass="slider"/></td>
 							</tr>
 							<tr>
-								<td>Zoneventiel badkamer:</td>
+								<td>
+									<c:out value="${output[1].name}"></c:out>
+								</td>
+								<td><form:checkbox path="plcOutputData[1].value" cssClass="slider"/></td>
 							</tr>
 							<tr>
-								<td>Zoneventiel zolder</td>
+								<td>
+									<c:out value="${output[0].name}"></c:out>
+								</td>
+								<td><form:checkbox path="plcOutputData[0].value" cssClass="slider"/></td>
 							</tr>
 						</table>
 					</div>
@@ -65,14 +87,6 @@
 							</tr>
 							<tr>
 								<td>Stop 1 regeling leefruimte:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Start 2 regeling leefruimte:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 2 regeling leefruimte:</td>
 								<td><input type="text"></td>
 							</tr>
 							<tr>
@@ -106,14 +120,6 @@
 								<td><input type="text"></td>
 							</tr>
 							<tr>
-								<td>Start 2 regeling leefruimte:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 2 regeling leefruimte:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
 								<td colspan="2"><input type="checkbox" name="maandag"
 									value="true">Ma <input type="checkbox" name="dinsdag"
 									value="true">Di <input type="checkbox" name="woensdag"
@@ -140,14 +146,6 @@
 								<td><input type="text"></td>
 							</tr>
 							<tr>
-								<td>Start 2 regeling badkamer:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 2 regeling badkamer:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
 								<td colspan="2"><input type="checkbox" name="maandag"
 									value="true">Ma <input type="checkbox" name="dinsdag"
 									value="true">Di <input type="checkbox" name="woensdag"
@@ -171,14 +169,6 @@
 							</tr>
 							<tr>
 								<td>Stop 1 regeling zolder:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Start 2 regeling zolder:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 2 regeling zolder:</td>
 								<td><input type="text"></td>
 							</tr>
 							<tr>

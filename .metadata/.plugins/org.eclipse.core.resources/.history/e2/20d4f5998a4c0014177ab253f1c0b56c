@@ -1,0 +1,24 @@
+package be.stijn.intranet.command;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import be.stijn.intranet.maps.Output;
+
+public class PlcDataCommand {
+	
+	private List<Output> plcOutputData = new ArrayList<Output>();
+	
+	public void addPlcOutputData(Output value) {
+		plcOutputData.add(value);
+	}
+	
+	public List<Output> getPlcOutputData() {
+		return plcOutputData;
+	}
+
+	public void setPlcOutputData(List<Output> plcOutputData) {
+		this.plcOutputData = plcOutputData;
+	}
+
+}

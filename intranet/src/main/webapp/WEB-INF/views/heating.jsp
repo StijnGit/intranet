@@ -20,20 +20,19 @@
 							<tr>
 								<td class="btnLeefruimte cursor">
 									<c:out value="${input[0].name}"></c:out>
-									<td><form:checkbox path="plcInputData[0].value" cssClass="slider"/></td>
+									<form:checkbox path="plcInputData[0].value" cssClass="slider"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="btnBadkamer cursor">
 									<c:out value="${input[1].name}"></c:out>
-									<td><form:checkbox path="plcInputData[1].value" cssClass="slider"/></td>
+									<form:checkbox path="plcInputData[1].value" cssClass="slider"/>
 								</td> 
 							</tr>
 							<tr>
 								<td class="btnZolder cursor">
 									<c:out value="${input[2].name}"></c:out>
-									<td><form:checkbox path="plcInputData[2].value" cssClass="slider"/></td>
-									
+									<form:checkbox path="plcInputData[2].value" cssClass="slider"/>							
 								</td>
 							</tr>
 						</table>

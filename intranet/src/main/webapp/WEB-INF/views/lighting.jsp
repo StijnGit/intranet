@@ -19,6 +19,7 @@
 							<tr>
 								<td>
 									<c:out value="${output[16].name}"></c:out>
+									
 								</td>								
 								<td>
 									<form:checkbox id="16" path="plcOutputData[16].value" cssClass="slider"/>
@@ -229,13 +230,18 @@
 						</tr>
 					</table>
 					</div>
-
-					<br>
-					<input type="submit" value="aanpassen">
 				</div>
 			</form:form>
 		</div>
 		
+		<script type="text/javascript">
+		$(".slider").change(function() {
+		   var state = this.checked;
+		   var nr = this.id;
+
+		   
+		});
+		</script>
 		
 	</tiles:putAttribute>
 	<tiles:putAttribute name="footer" cascade="true">

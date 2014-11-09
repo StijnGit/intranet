@@ -7,10 +7,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/mystyle.css" type="text/css">
 <script type="text/JavaScript" src="javascript/jquery-1.9.1.min.js"></script>
-<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css"
-	type="text/css">
+<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css" type="text/css">
+
+<link href="css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
+<script src="javascript/bootstrap-switch-3.0.2/dist/js/bootstrap-switch.js"></script>
+
+<link href="css/jquery.timepicker.css" rel="stylesheet">
+<script src="javascript/jquery-timepicker/jquery.timepicker.js"></script>
+
 <script type="text/javascript"
-	src="javascript/jquery-ui-1.10.1.custom.min.js"></script>
+	src="javascript/jquery-ui-1.10.1.custom.min.js">
+</script>
+
 <script>
 	$(function() {
 		$("#sortable").sortable();
@@ -18,16 +26,18 @@
 	});
 </script>
 
-<script src="javascript/ios-checkboxes/iphone-style-checkboxes.js"></script>
-<link rel="stylesheet" href="css/ios-checkboxes/style.css">
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.slider').iphoneStyle({
-			checkedLabel : 'Aan',
-			uncheckedLabel : 'Uit'
-		});
+		$(".slider").bootstrapSwitch();
 	});
 </script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".time").timepicker();
+	});
+</script>
+
 
 <script>
 	$(document).ready(function(){
@@ -94,7 +104,7 @@ $(document).ready(function(){
 				window.location = "lighting";
 			});
 			$(".energy").click(function() {
-				window.location = "energy";
+				window.location = "http://monitoring.solaredge.com/";
 			});
 			$(".metering").click(function() {
 				window.location = "metering";
@@ -134,5 +144,6 @@ $(document).ready(function(){
 		<tiles:getAsString name="content" />
 	</div>
 	<tiles:getAsString name="footer" />
+	<tiles:getAsString name="scripts" ignore="true"/>
 </body>
 </html>

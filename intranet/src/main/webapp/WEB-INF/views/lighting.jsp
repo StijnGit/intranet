@@ -235,12 +235,23 @@
 		</div>
 		
 		<script type="text/javascript">
-		$(".slider").change(function() {
-		   var state = this.checked;
-		   var nr = this.id;
-
-		   
-		});
+			$(".slider").on('switchChange.bootstrapSwitch', function (e, data){
+				var nr = $(this).attr("id");
+				var val = $(this).prop("checked");
+				console.log(nr);
+				console.log(val);
+				$.ajax({
+					type: "POST",
+					url: "lighting",
+					data: JSON.stringify({nr: nr, value: val}),
+					dataType: "json",
+					contentType: 'application/json',
+					succes: function(){
+						alert("yes, it works");
+					},
+					error: function() {}
+				});
+			});
 		</script>
 		
 	</tiles:putAttribute>

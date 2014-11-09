@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import be.stijn.intranet.maps.Input;
 import be.stijn.intranet.service.InputService;
 
-/**
- * Handles requests for the application home page.
- */
+
 @Controller
 public class HomeController {
 

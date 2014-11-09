@@ -8,8 +8,8 @@
 <tiles:insertTemplate template="../templates/template.jsp">
 	<tiles:putAttribute name="content" cascade="true">
 		<div class="content">
-			<form:form action="heating">
-				<div class="tableLeft">
+			<div class="tableLeft">
+				<form:form action="heating">
 					<div class="rounded-corners group">
 
 						<table>
@@ -18,22 +18,22 @@
 								<th width="60">Status:</th>
 							</tr>
 							<tr>
-								<td class="btnLeefruimte cursor">
-									<c:out value="${input[0].name}"></c:out>
-									<form:checkbox path="plcInputData[0].value" cssClass="slider"/>
-								</td>
+								<td class="zoneSelect cursor" data-zone="living"><c:out
+										value="${input[0].name}"></c:out></td>
+								<td><form:checkbox path="plcInputData[0].value"
+										cssClass="slider" /></td>
 							</tr>
 							<tr>
-								<td class="btnBadkamer cursor">
-									<c:out value="${input[1].name}"></c:out>
-									<form:checkbox path="plcInputData[1].value" cssClass="slider"/>
-								</td> 
+								<td class="zoneSelect cursor" data-zone="badkamer"><c:out
+										value="${input[1].name}"></c:out></td>
+								<td><form:checkbox path="plcInputData[1].value"
+										cssClass="slider" /></td>
 							</tr>
 							<tr>
-								<td class="btnZolder cursor">
-									<c:out value="${input[2].name}"></c:out>
-									<form:checkbox path="plcInputData[2].value" cssClass="slider"/>							
-								</td>
+								<td class="zoneSelect cursor" data-zone="zolder"><c:out
+										value="${input[2].name}"></c:out></td>
+								<td><form:checkbox path="plcInputData[2].value"
+										cssClass="slider" /></td>
 							</tr>
 						</table>
 					</div>
@@ -45,150 +45,87 @@
 								<th width="60">Status:</th>
 							</tr>
 							<tr>
-								<td>
-									<c:out value="${output[3].name}"></c:out>
-								</td>
-								<td><form:checkbox path="plcOutputData[3].value" cssClass="slider"/></td>
+								<td><c:out value="${output[3].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[3].value"
+										cssClass="slider" /></td>
 							</tr>
 							<tr>
-								<td>
-									<c:out value="${output[2].name}"></c:out>
-								</td>
-								<td><form:checkbox path="plcOutputData[2].value" cssClass="slider"/></td>
+								<td><c:out value="${output[2].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[2].value"
+										cssClass="slider" /></td>
 							</tr>
 							<tr>
-								<td>
-									<c:out value="${output[1].name}"></c:out>
-								</td>
-								<td><form:checkbox path="plcOutputData[1].value" cssClass="slider"/></td>
+								<td><c:out value="${output[1].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[1].value"
+										cssClass="slider" /></td>
 							</tr>
 							<tr>
-								<td>
-									<c:out value="${output[0].name}"></c:out>
-								</td>
-								<td><form:checkbox path="plcOutputData[0].value" cssClass="slider"/></td>
+								<td><c:out value="${output[0].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[0].value"
+										cssClass="slider" /></td>
 							</tr>
 						</table>
 					</div>
-					<br>
-					<input type="submit" value="aanpassen">
-				</div>
-				<div class="tableRight">
-					<div class="rounded-corners group ThermLeefruimte">
+				</form:form>
+			</div>
+			<div class="tableRight">
+				<div class="rounded-corners group">
+					<form:form action="heating" method="post">
 						<table>
 							<tr>
-								<th width="200">Instellingen 1:</th>
+								<th width="200">Instellingen:</th>
 								<th width="40">Waarde:</th>
 							</tr>
 							<tr>
-								<td>Start 1 regeling leefruimte:</td>
-								<td><input type="text"></td>
+								<td>Start regeling:</td>
+								<td><form:input type="text" path="beginTime" cssClass="time"/></td>
 							</tr>
 							<tr>
-								<td>Stop 1 regeling leefruimte:</td>
-								<td><input type="text"></td>
+								<td>Stop regeling:</td>
+								<td><input type="text" Class="time"></td>
 							</tr>
 							<tr>
-								<td colspan="2">
-									<input type="checkbox" name="maandag" id="1" value="true">Ma 
-									<input type="checkbox" name="dinsdag" id="2" value="true">Di 
-									<input type="checkbox" name="woensdag" id="3" value="true">Wo 
-									<input type="checkbox" name="donderdag" id="4" value="true">Do 
-									<input type="checkbox" name="vrijdag" id="5" value="true">Vr 
-									<input type="checkbox" name="zaterdag" id="6" value="true">Za 
+								<td colspan="2"><input type="checkbox" name="maandag"
+									id="1" value="true">Ma <input type="checkbox"
+									name="dinsdag" id="2" value="true">Di <input
+									type="checkbox" name="woensdag" id="3" value="true">Wo
+									<input type="checkbox" name="donderdag" id="4" value="true">Do
+									<input type="checkbox" name="vrijdag" id="5" value="true">Vr
+									<input type="checkbox" name="zaterdag" id="6" value="true">Za
 									<input type="checkbox" name="zondag" id="7" value="true">Zo
 								</td>
 							</tr>
+							<tr>
+								<td><input type="submit" value="Toevoegen"></td>
+							</tr>
 						</table>
-					</div>
-					<div>
-						<br class="ThermLeefruimte">
-					</div>
-					<div class="rounded-corners group ThermLeefruimte">
 						<table>
-							<tr>
-								<th width="200">Instellingen 2:</th>
-								<th width="40">Waarde:</th>
-							</tr>
-							<tr>
-								<td>Start 1 regeling leefruimte:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 1 regeling leefruimte:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="checkbox" name="maandag"
-									value="true">Ma <input type="checkbox" name="dinsdag"
-									value="true">Di <input type="checkbox" name="woensdag"
-									value="true">Wo <input type="checkbox" name="donderdag"
-									value="true">Do <input type="checkbox" name="vrijdag"
-									value="true">Vr <input type="checkbox" name="zaterdag"
-									value="true">Za <input type="checkbox" name="zondag"
-									value="true">Zo</td>
+							<tr class="result">
+
 							</tr>
 						</table>
-					</div>
-					<div class="rounded-corners group ThermBadkamer">
-						<table>
-							<tr>
-								<th width="200">Instellingen:</th>
-								<th width="40">Waarde:</th>
-							</tr>
-							<tr>
-								<td>Start 1 regeling badkamer:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 1 regeling badkamer:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="checkbox" name="maandag"
-									value="true">Ma <input type="checkbox" name="dinsdag"
-									value="true">Di <input type="checkbox" name="woensdag"
-									value="true">Wo <input type="checkbox" name="donderdag"
-									value="true">Do <input type="checkbox" name="vrijdag"
-									value="true">Vr <input type="checkbox" name="zaterdag"
-									value="true">Za <input type="checkbox" name="zondag"
-									value="true">Zo</td>
-							</tr>
-						</table>
-					</div>
-					<div class="rounded-corners group ThermZolder">
-						<table>
-							<tr>
-								<th width="200">Instellingen:</th>
-								<th width="40">Waarde:</th>
-							</tr>
-							<tr>
-								<td>Start 1 regeling zolder:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td>Stop 1 regeling zolder:</td>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="checkbox" name="maandag"
-									value="true">Ma <input type="checkbox" name="dinsdag"
-									value="true">Di <input type="checkbox" name="woensdag"
-									value="true">Wo <input type="checkbox" name="donderdag"
-									value="true">Do <input type="checkbox" name="vrijdag"
-									value="true">Vr <input type="checkbox" name="zaterdag"
-									value="true">Za <input type="checkbox" name="zondag"
-									value="true">Zo</td>
-							</tr>
-						</table>
-					</div>
+					</form:form>
 				</div>
-			</form:form>
+			</div>
 		</div>
 	</tiles:putAttribute>
 	<tiles:putAttribute name="footer" cascade="true">
 		<div id="footer">
 			<p>Stijn Claessens 2012 ©</p>
 		</div>
+	</tiles:putAttribute>
+	<tiles:putAttribute name="scripts" cascade="true">
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".zoneSelect").click(function() {
+					var zone = $(this).data("zone");
+					$.get("heating/" + zone, function(data) {
+						debugger;
+						$(".result").html("<td>" + data + "</td>");
+						alert("Load was performed.");
+					});
+				})
+			});
+		</script>
 	</tiles:putAttribute>
 </tiles:insertTemplate>

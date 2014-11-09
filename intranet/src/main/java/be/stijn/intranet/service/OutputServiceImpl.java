@@ -64,6 +64,7 @@ public class OutputServiceImpl implements OutputService {
 	}
 
 	@Override
+	@Transactional
 	public Output getOutput(int nr) {
 		return outputDao.findByNr(nr);
 	}

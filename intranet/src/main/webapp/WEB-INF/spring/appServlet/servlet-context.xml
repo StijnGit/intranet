@@ -1,90 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
-	<resources mapping="/images/**" location="/resources/images/"/>
-	<resources mapping="/css/images/**" location="/resources/images/"/>
-	<resources mapping="/css/**" location="/resources/css/"/>
-	<resources mapping="javascript/**" location="/resources/javascript/"/>
+	<resources mapping="/images/**" location="/resources/images/" />
+	<resources mapping="/css/images/**" location="/resources/images/" />
+	<resources mapping="/css/**" location="/resources/css/" />
+	<resources mapping="javascript/**" location="/resources/javascript/" />
 
-	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
-	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	<!--  <context:component-scan base-package="be.stijn.intranet.controller" /> -->
+	<!-- <context:component-scan base-package="be.stijn.intranet.controller" 
+		/> -->
 	<context:component-scan base-package="be.stijn.intranet" />
-	
-	<!-- JDBC Data Source. It is assumed you have MySQL running on localhost port 3306 with
-       username root and blank password. Change below if it's not the case -->
-       
-  <beans:bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-    <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <beans:property name="url" value="jdbc:mysql://localhost:3306/intranet"/>
-    <beans:property name="username" value="root"/>
-    <beans:property name="password" value="aquafin"/>
-    <beans:property name="validationQuery" value="SELECT 1"/>
-  </beans:bean>
-   
-  <!-- Hibernate Session Factory -->
-  <beans:bean id="SessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-    <beans:property name="dataSource" ref="myDataSource"/>
-    <beans:property name="packagesToScan">
-      <beans:array>
-        <beans:value>be.stijn.intranet</beans:value>
-      </beans:array>
-    </beans:property>
-    <beans:property name="hibernateProperties">
-      <beans:value>
-        hibernate.dialect=org.hibernate.dialect.MySQLDialect
-      </beans:value>
-    </beans:property>
-  </beans:bean> 
-   
-  <!-- Hibernate Transaction Manager -->
-  <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-    <beans:property name="sessionFactory" ref="SessionFactory"/>
-  </beans:bean>
-   
-  <!-- Activates annotation based transaction management -->
-  <tx:annotation-driven transaction-manager="transactionManager"/>
 
-  
-  
-  <!-- Tiles config -->
-  <beans:bean id="viewResolver"
-    class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-    <beans:property name="viewClass">
-        <beans:value>
-            org.springframework.web.servlet.view.tiles2.TilesView
-        </beans:value>
-    </beans:property>
-</beans:bean>
-  
-  <beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
-  	<beans:property name="definitions">
-  		<beans:list>
-  			<beans:value>/WEB-INF/tiles-defs/templates.xml</beans:value>
-  		</beans:list>
-  	</beans:property>
-  </beans:bean>
-  
+	<!-- JDBC Data Source. It is assumed you have MySQL running on localhost 
+		port 3306 with username root and blank password. Change below if it's not 
+		the case -->
+
+	<beans:bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url"
+			value="jdbc:mysql://localhost:3306/intranet" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="aquafin" />
+		<beans:property name="validationQuery" value="SELECT 1" />
+	</beans:bean>
+
+	<!-- Hibernate Session Factory -->
+	<beans:bean id="SessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="dataSource" ref="myDataSource" />
+		<beans:property name="packagesToScan">
+			<beans:array>
+				<beans:value>be.stijn.intranet</beans:value>
+			</beans:array>
+		</beans:property>
+		<beans:property name="hibernateProperties">
+			<beans:value>
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+			</beans:value>
+		</beans:property>
+	</beans:bean>
+
+	<!-- Hibernate Transaction Manager -->
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<beans:property name="sessionFactory" ref="SessionFactory" />
+	</beans:bean>
+
+	<!-- Activates annotation based transaction management -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 
-    
-	
+
+	<!-- Tiles config -->
+	<beans:bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<beans:property name="viewClass">
+			<beans:value>
+				org.springframework.web.servlet.view.tiles2.TilesView
+			</beans:value>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<beans:property name="definitions">
+			<beans:list>
+				<beans:value>/WEB-INF/tiles-defs/templates.xml</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+	<!-- Cron jobs -->
+	<beans:bean id="runTask" class="be.stijn.intranet.cron.RunTask"></beans:bean>
+	<beans:bean name="runJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<beans:property name="jobClass" value="be.stijn.intranet.cron.RunJob" />
+		<beans:property name="jobDataAsMap">
+			<beans:map>
+				<beans:entry key="runTask" value-ref="runTask" />
+			</beans:map>
+		</beans:property>
+	</beans:bean>
+	<beans:bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<beans:property name="jobDetail" ref="runJob" />
+		<beans:property name="repeatInterval" value="5000" />
+		<beans:property name="startDelay" value="1000" />
+	</beans:bean>
+	<beans:bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+
+		<beans:property name="jobDetail" ref="runJob" />
+		<beans:property name="cronExpression" value="0/5 * * * * ?" />
+
+	</beans:bean>
+	<beans:bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<beans:property name="jobDetails">
+			<beans:list>
+				<beans:ref bean="runJob" />
+			</beans:list>
+		</beans:property>
+
+		<beans:property name="triggers">
+			<beans:list>
+				<beans:ref bean="simpleTrigger" />
+			</beans:list>
+		</beans:property>
+	</beans:bean>
 </beans:beans>

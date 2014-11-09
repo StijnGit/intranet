@@ -1,5 +1,7 @@
 package be.stijn.intranet.maps;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,8 +13,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @Entity
 @Table(name = "output")
-public class Output{
+public class Output implements Serializable{
 
+	private static final long serialVersionUID = -6541907822820047888L;
+	
 	@Id @GeneratedValue private long id;
 	private String name;
 	private int word;

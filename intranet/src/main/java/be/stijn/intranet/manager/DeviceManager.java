@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import PLCCom.ConnectResult;
 import PLCCom.MPI_Device;
 import PLCCom.ReadRequest;
+import PLCCom.WriteRequest;
+import PLCCom.WriteResult;
 import PLCCom.authentication;
 import PLCCom.eBaudrate;
 import PLCCom.ePLCType;
@@ -47,4 +49,18 @@ public class DeviceManager {
 		}
 		return null;
 	}
+	
+	public WriteResult writeRequest(eRegion status, byte writeByte, int byteNr) {
+		WriteRequest[] oWriteRequest = new WriteRequest[1];
+        oWriteRequest[0] = new WriteRequest();
+        oWriteRequest[0].setRegion(status);
+        oWriteRequest[0].setDB(0);
+        //oWriteRequest[0].setStartByte(byteNr);
+        oWriteRequest[0].setBit((byte)byteNr);
+        oWriteRequest[0].addByte(writeByte);
+        
+		return device.write(oWriteRequest)[0];
+		
+		
+	}	
 }

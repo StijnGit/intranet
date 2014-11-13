@@ -13,6 +13,7 @@ import PLCCom.ePLCType;
 import PLCCom.eRegion;
 import PLCCom.eSpeed;
 
+
 @Service
 public class DeviceManager {
 
@@ -50,16 +51,15 @@ public class DeviceManager {
 		return null;
 	}
 	
-	public WriteResult writeRequest(eRegion status, byte writeByte, int byteNr) {
-		WriteRequest[] oWriteRequest = new WriteRequest[1];
-        oWriteRequest[0] = new WriteRequest();
-        oWriteRequest[0].setRegion(status);
-        oWriteRequest[0].setDB(0);
-        //oWriteRequest[0].setStartByte(byteNr);
-        oWriteRequest[0].setBit((byte)byteNr);
-        oWriteRequest[0].addByte(writeByte);
+	public WriteResult writeRequest(eRegion status, int wordNr, Byte word) {
+		WriteRequest[] mWriteRequest = new WriteRequest[1];
+        mWriteRequest[0] = new WriteRequest();
+        mWriteRequest[0].setRegion(status);
+        mWriteRequest[0].setDB(0);
+        mWriteRequest[0].setStartByte(wordNr);
+        WriteResult[] res = device.write(mWriteRequest);
         
-		return device.write(oWriteRequest)[0];
+		return device.write(mWriteRequest)[0];
 		
 		
 	}	

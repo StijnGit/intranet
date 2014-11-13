@@ -22,7 +22,7 @@
 									
 								</td>								
 								<td>
-									<form:checkbox id="16" path="plcOutputData[16].value" cssClass="slider"/>
+									<form:checkbox id="24" path="plcOutputData[16].value" cssClass="slider"/>
 								</td>
 							</tr>
 							<tr>

@@ -78,7 +78,8 @@
 							</tr>
 							<tr>
 								<td>Start regeling:</td>
-								<td><form:input type="text" path="beginTime" cssClass="time"/></td>
+								<td><form:input type="text" path="" cssClass="time"/></td>
+<%-- 								<td><form:input type="text" path="starttime" cssClass="time"/></td> --%>
 							</tr>
 							<tr>
 								<td>Stop regeling:</td>
@@ -111,7 +112,7 @@
 	</tiles:putAttribute>
 	<tiles:putAttribute name="footer" cascade="true">
 		<div id="footer">
-			<p>Stijn Claessens 2012 ©</p>
+			<p>Stijn Claessens 2014 ©</p>
 		</div>
 	</tiles:putAttribute>
 	<tiles:putAttribute name="scripts" cascade="true">

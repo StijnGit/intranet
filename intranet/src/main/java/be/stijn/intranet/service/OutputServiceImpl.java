@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import PLCCom.eRegion;
 import be.stijn.intranet.dao.OutputDao;
 import be.stijn.intranet.manager.DeviceManager;
@@ -31,7 +32,10 @@ public class OutputServiceImpl implements OutputService {
 
 
 		DeviceManager plc = new DeviceManager();
-		if (plc.connect().HasConnected()) {
+		//ConnectResult res = plc.connect();
+
+		if (plc.connect().HasConnected()){
+		//if (res.Quality().equals(OperationResult.eQuality.GOOD)) {
 			boolean resOut[] = plc.readRequest(eRegion.Output);
 			
 			for (int i = 0; i < resOut.length; ++i)

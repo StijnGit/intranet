@@ -22,6 +22,7 @@ public class DeviceManager {
 			ePLCType.S7_300_400_compatibel);
 	
 	public ConnectResult connect() {
+		//authentication.Serial("88884-42106-116262-2967058");
 		authentication.Serial("89884-35160-117477-2367153");
 		authentication.User("Claessens");
 		ConnectResult conresult = device.Connect();
@@ -51,16 +52,16 @@ public class DeviceManager {
 		return null;
 	}
 	
-	public WriteResult writeRequest(eRegion status, int wordNr, Byte word) {
+	public void writeRequest(eRegion status, int byteNr, byte bitNr) {
 		WriteRequest[] mWriteRequest = new WriteRequest[1];
         mWriteRequest[0] = new WriteRequest();
         mWriteRequest[0].setRegion(status);
-        mWriteRequest[0].setDB(0);
-        mWriteRequest[0].setStartByte(wordNr);
-        WriteResult[] res = device.write(mWriteRequest);
-        
-		return device.write(mWriteRequest)[0];
+        mWriteRequest[0].setStartByte(byteNr);
+        mWriteRequest[0].setBit(bitNr);
+        mWriteRequest[0].addBit(true);
+
+		WriteResult[] res = device.write(mWriteRequest);
 		
-		
+		System.out.println(res[0].Message());
 	}	
 }

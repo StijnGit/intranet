@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import be.stijn.intranet.command.PlcDataCommand;
 import be.stijn.intranet.maps.Output;
@@ -38,8 +39,10 @@ public class LightingController {
 	}
 	
 	@RequestMapping(value = { "/lighting" }, method = RequestMethod.POST)
-	public void list(@RequestBody Output output, @ModelAttribute PlcDataCommand cmd, Model model) {
+	@ResponseBody
+	public boolean list(@RequestBody Output output, @ModelAttribute PlcDataCommand cmd, Model model) {
 
 		merkerService.setMerker(output.getNr(), output.getValue());
+		return true;
 	}
 }

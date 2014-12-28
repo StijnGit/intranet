@@ -5,9 +5,115 @@
       <description>Pipes Output</description>
       <link>http://pipes.yahoo.com/pipes/pipe.info?_id=790c1cc25610e6b571d4857eaeb44fa4</link>
       <atom:link rel="next" href="http://pipes.yahoo.com/pipes/pipe.run?_id=790c1cc25610e6b571d4857eaeb44fa4&amp;_render=rss&amp;page=2" />
-      <pubDate>Sun, 05 Oct 2014 11:16:27 +0000</pubDate>
+      <pubDate>Sat, 18 Oct 2014 07:52:42 +0000</pubDate>
       <generator>http://pipes.yahoo.com/pipes/</generator>
       <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/jbossbuzz" /><feedburner:info uri="jbossbuzz" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+         <title>JBoss Tools Integration Stack 4.1.6.Final / JBoss Developer Studio Integration Stack 7.0.3.GA</title>
+         <link>http://feedproxy.google.com/~r/jbossbuzz/~3/szMWUaqQq3I/2014-10-09-JBTIS-4.html</link>
+         <description>&lt;div id="preamble"&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;&lt;strong&gt;Maintenance update of your favorite integration tools.&lt;/strong&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="jbosstools jbdevstudio blog header"&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The Integration Stack for JBoss Tools Developer Studio is a set of plugins for Eclipse that provides tooling for the following frameworks:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ulist"&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/bpel.html"&gt;BPEL Designer&lt;/a&gt; - Orchestrating your business processes.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/bpmn2.html"&gt;BPMN2 Modeler&lt;/a&gt; - A graphical modeling tool which allows creation and editing of Business Process Modeling Notation diagrams using graphiti.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/drools.html"&gt;Drools&lt;/a&gt; - A Business Logic integration Platform which provides a unified and integrated platform for Rules, Workflow and Event Processing.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://www.jboss.org/jbossesb"&gt;JBoss ESB&lt;/a&gt; - An enterprise service bus for connecting enterprise applications and services.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/apachecamel.html"&gt;Fuse Apache Camel Tooling&lt;/a&gt; - A graphical tool for integrating software components that works with Apache ServiceMix, Apache ActiveMQ, Apache Camel and the FuseSource distributions.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://docs.jboss.com/jbpm/v3.2/userguide/html_single/"&gt;jBPM3&lt;/a&gt; - A flexible Business Process Management (BPM) Suite - JBoss Enterprise SOA Platform 5.3.x compatible version.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/modeshape.html"&gt;Modeshape&lt;/a&gt; - A distributed, hierarchical, transactional and consistent data store with support for queries, full-text search, events, versioning, references, and flexible and dynamic schemas. It is very fast, highly available, extremely scalable, and it is 100% open source.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/switchyard.html"&gt;SwitchYard&lt;/a&gt; - A lightweight service delivery framework providing full lifecycle support for developing, deploying, and managing service-oriented applications.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features/teiiddesigner.html"&gt;Teiid Designer&lt;/a&gt; - A visual tool that enables rapid, model-driven definition, integration, management and testing of data services without programming using the Teiid runtime framework.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;All of these components have been verified to work with the same dependencies as JBoss Tools 4.1 and Developer Studio 7, so installation is easy.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="installation"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#installation"&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;To install the Integration Stack tools, first install JBoss Developer Studio from the &lt;a rel="nofollow" target="_blank" href="https://www.jboss.org/products/devstudio.html"&gt;all-in-one installer&lt;/a&gt;, bundled and configured out of the box with everything you need to get started. Alternatively, if you already have eclipse-jee-kepler installed, you can install &lt;a rel="nofollow" target="_blank" href="https://marketplace.eclipse.org/content/red-hat-jboss-developer-studio-kepler"&gt;JBoss Developer Studio&lt;/a&gt; or &lt;a rel="nofollow" target="_blank" href="https://marketplace.eclipse.org/content/jboss-tools-kepler"&gt;JBoss Tools&lt;/a&gt; from the Eclipse Marketplace via Help &amp;gt; Eclipse Marketplace&amp;#8230;&amp;#8203;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/blog/images/jbtis-b1.png" alt="jbtis-b1"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Once Developer Studio is installed, restart Eclipse and select the Software/Update tab in the JBoss Central view and look for the JBoss Developer Studio Integration Stack installation section.  Select the items you&amp;#8217;d like to install:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/blog/images/jbtis-b2.png" alt="jbtis-b2"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;The community JBoss Tools Integration Stack URL is:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;&lt;a rel="nofollow" target="_blank" href="http://download.jboss.org/jbosstools/updates/stable/kepler/integration-stack" class="bare"&gt;http://download.jboss.org/jbosstools/updates/stable/kepler/integration-stack&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Note: If you installed into your own Eclipse you should bump up the launch resource parameters:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="listingblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;pre class="highlight"&gt;&lt;code class="language-xml"&gt;--launcher.XXMaxPermSize 256m --launcher.appendVmargs -vmargs -Dosgi.requiredJavaVersion=1.6 -XX:MaxPermSize=256m -Xms512m -Xmx1024m&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="what-s-been-updated"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#what-s-been-updated"&gt;&lt;/a&gt;What&amp;#8217;s Been Updated?&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Fix release versions of Fuse Tooling 7.2.2, jBPM/Drools 6.1.0  and Teiid Designer 8.3.4.  Also - there are updated ESB 1.5.310.Final project examples.  Look for specific bug fixes in the &lt;a rel="nofollow" target="_blank" href="https://devstudio.jboss.com/updates/7.0/integration-stack/release-notes/Release_Notes_7.0.3.html"&gt;Release Notes&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="sect1"&gt;
+      &lt;h2 id="keep-up-to-date-with-the-jboss-tools-home"&gt;
+      &lt;a rel="nofollow" class="anchor" href="#keep-up-to-date-with-the-jboss-tools-home"&gt;&lt;/a&gt;Keep up to date with the JBoss Tools home&lt;/h2&gt;
+      &lt;div class="sectionbody"&gt;
+      &lt;div class="paragraph"&gt;
+      &lt;p&gt;Don&amp;#8217;t miss the new &lt;a rel="nofollow" target="_blank" href="http://tools.jboss.org/features"&gt;Features tab&lt;/a&gt; for up to date information on your favorite Integration Stack component !&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/jbossbuzz/~4/szMWUaqQq3I" height="1" width="1"/&gt;</description>
+         <author>pleacu</author>
+         <guid isPermaLink="false">http://tools.jboss.org/blog/2014-10-09-JBTIS-4.html</guid>
+         <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
+      <feedburner:origLink>http://tools.jboss.org/blog/2014-10-09-JBTIS-4.html</feedburner:origLink></item>
+      <item>
          <title>EclipseCon NA 2015 Call for papers!</title>
          <link>http://feedproxy.google.com/~r/jbossbuzz/~3/7EQ2N4ZFJj0/2014-10-03-eclipsecon-2015-cfp.html</link>
          <description>&lt;div class="paragraph"&gt;
@@ -117,8 +223,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;If you can answer yes to the above, then you will be happy to hear we now support this.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-18094a.png" alt="JBIDE-18094a"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-18094a.png" alt="JBIDE 18094a"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;Now, if you run a server in Debug mode and a hot code replace fails due to some class or jar changes,
@@ -154,8 +262,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;JBoss Central now features a new AngularJS with Forge project wizard to let you kickstart new JavaEE based applications almost from scratch, using the powerful &lt;a rel="nofollow" target="_blank" href="http://forge.jboss.org/"&gt;JBoss Forge&lt;/a&gt; scaffolding capabilities.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img alt="new-forge-wizard"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="new forge wizard"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;You will be asked to install Forge Tools, if it is not already installed. The wizard will also recommend you to install the AngularJS tooling.&lt;/p&gt;
@@ -538,8 +648,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;In Beta3 we&amp;#8217;ve added the Maven Central Archetype catalog meaning you get access to ~9600 archetypes in a few seconds vs several minutes in pre m2e 1.5 days.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/maven/images/maven-central-catalog.png" alt="Maven Central Archetype Catalog"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/maven/images/maven-central-catalog.png" alt="Maven Central Archetype Catalog"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="sect2"&gt;
@@ -895,8 +1007,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;Another improvement to this workflow is the ability to easily import multi-module projects to an Eclipse Working Set. The default name is inferred from the root project but can be overridden manually:&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img alt="m2e-workingset-import"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="m2e workingset import"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;More &lt;a rel="nofollow" target="_blank" href="http://bugs.eclipse.org/436679"&gt;performance&lt;/a&gt; &lt;a rel="nofollow" target="_blank" href="http://bugs.eclipse.org/436668"&gt;improvements&lt;/a&gt; during import itself are to be expected to be included in m2e 1.6.0.&lt;/p&gt;
@@ -949,8 +1063,10 @@
       &lt;p&gt;Rather than right-clicking on a project, going to the &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;Properties&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Maven&lt;/span&gt;&lt;/span&gt; page, then manually (mis)typing a list of active or disabled profiles,
       you can now just use &lt;span class="keyseq"&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt;&lt;/span&gt; to open the new Maven Profile selection interface.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img alt="m2e-profile-selection"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="m2e profile selection"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;The new interface is also accessible from the Maven context menu: Right-click project &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;Maven&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Select Maven Profiles&amp;#8230;&amp;#8203;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
@@ -994,8 +1110,10 @@
       If an OOD project has not been selected, a warning is shown underneath the selection table with a link equivalent to "Add out-of-date".
       Warning text and "Add out-of-date" button tooltip show a count of unselected OOD projects.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img alt="m2e-select-ood-projects"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="m2e select ood projects"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;See it in action: &lt;a rel="nofollow" target="_blank" href="http://screencast.com/t/27S0qeca" class="bare"&gt;http://screencast.com/t/27S0qeca&lt;/a&gt;&lt;/p&gt;
@@ -1046,8 +1164,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;m2e now has a global Checksum Policy available in &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;Preferences&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Maven&lt;/span&gt;&lt;/span&gt;, that will help you keep your sanity, and yor local repository clean:&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img alt="m2e-checksum-policy-flag"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="m2e checksum policy flag"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;While m2e actually won&amp;#8217;t create any Warning markers on projects when "Warn" is selected, it will override existing checksum policies set on repositories.&lt;/p&gt;
@@ -1077,8 +1197,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;With the new &lt;span class="menuseq"&gt;&lt;span class="menu"&gt;Preferences&lt;/span&gt;&amp;#160;&amp;#9656; &lt;span class="menuitem"&gt;Errors/Warnings&lt;/span&gt;&lt;/span&gt; page, users can now decide according to their own needs whether these errors should be downgraded to &lt;code&gt;Warning&lt;/code&gt;, or even be ignored entirely.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img alt="m2e-warnerrors-prefs"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img alt="m2e warnerrors prefs"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;See bugs &lt;a rel="nofollow" target="_blank" href="https://bugs.eclipse.org/433776"&gt;433776&lt;/a&gt;, &lt;a rel="nofollow" target="_blank" href="https://bugs.eclipse.org/434053"&gt;434053&lt;/a&gt;&lt;/p&gt;
@@ -1278,8 +1400,10 @@
       &lt;p&gt;Today we are introducing JBoss Tools Community Acceptance Testing (CAT)
       program to make sure we hear from you to know what is working and what is not working.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/images/jbosstools-cat-logo.png" alt="JBoss Tools CAT Logo"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/images/jbosstools-cat-logo.png" alt="JBoss Tools CAT Logo"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
@@ -1425,8 +1549,10 @@
       &lt;p&gt;To allow users of JBoss Developer Studio to try out plugins which have not yet reached supported level more easily we&amp;#8217;ve added the notion
       of Early Access to JBoss Central.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/central/images/central-earlyaccess.png" alt="JBoss Central Early Access"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/central/images/central-earlyaccess.png" alt="JBoss Central Early Access"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;For now we&amp;#8217;ve moved Eclipse VJET into this area and made Arquillian Tools and AngularJS available for Developer Studio users.&lt;/p&gt;
@@ -1448,8 +1574,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This means we will use your system native browser to preview HTML5 based pages (XHTML/JSF will still use the old XULRunner based browser if possible).&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/vpe/images/4.2.0.Beta2/html-preview-vpe.png" alt="Visual Page Editor"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/vpe/images/4.2.0.Beta2/html-preview-vpe.png" alt="Visual Page Editor"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This new preview has much better Javascript support and just looks better.&lt;/p&gt;
@@ -1472,8 +1600,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;In JBoss Tools Tern is now automatically enabled on Javascript based projects intended to give you much stronger and better content assist in addition to what Eclipse JSDT provides.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/jst/images/4.2.0.Beta2/js-ecma5-2.png" alt="JavaScript ECMA 5"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/jst/images/4.2.0.Beta2/js-ecma5-2.png" alt="JavaScript ECMA 5"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;We are trying to make it that there is no user setup needed for most common javascript functionallity to work.&lt;/p&gt;
@@ -1481,8 +1611,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;For example if you create a Hybrid Mobile Tooling project we will enable the support for Apache Cordova Javascript out of the box.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/aerogear/images/1.1.0.Beta2/ca-cordovajs-2.png" alt="CordvaJS Content assist"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/aerogear/images/1.1.0.Beta2/ca-cordovajs-2.png" alt="CordvaJS Content assist"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="sect2"&gt;
@@ -1491,8 +1623,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;As an experiemnt, we&amp;#8217;ve made AngularJS available from JBoss Central under "Early Access" to give a try if you are an Angular user.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/jst/images/4.2.0.Beta2/angular.png" alt="Angular JS Support"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/jst/images/4.2.0.Beta2/angular.png" alt="Angular JS Support"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;We are really interested in hearing if these improvements to JavaScript and Angular support work for you!&lt;/p&gt;
@@ -1504,8 +1638,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;The OpenShift wizard now supports OpenShift&amp;#8217;s notion of quickstarts or instant apps.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/new-quickstart.png" alt="OpenShift Quickstarts"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/new-quickstart.png" alt="OpenShift Quickstarts"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This means it is now possible to just use OpenShift Wizard in Eclipse to use one of the many custom defined quickstarts without having to use the browser.&lt;/p&gt;
@@ -1520,8 +1656,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;On request OpenShift now supports saving and restoring your OpenShift instances via Snapshots.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/context-menu-snapshot.png" alt="Save/Restore snapshots"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/context-menu-snapshot.png" alt="Save/Restore snapshots"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="sect2"&gt;
@@ -1571,8 +1709,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;Thus now our WildFly/JBoss EAP based servers understand the notion of JBoss Modules and will locate the proper module.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-9479.png" alt="JBIDE-9479"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-9479.png" alt="JBIDE 9479"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;It even will detect if your &lt;code&gt;manifest.mf&lt;/code&gt; has &lt;code&gt;Dependencies&lt;/code&gt; and add them to the list of jboss modules to the classpath Eclipse will use for compiling.&lt;/p&gt;
@@ -1667,14 +1807,18 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;To install the Integration Stack tools, first install JBoss Developer Studio from the &lt;a rel="nofollow" target="_blank" href="https://www.jboss.org/products/devstudio.html"&gt;all-in-one installer&lt;/a&gt;, bundled and configured out of the box with everything you need to get started. Alternatively, if you already have eclipse-jee-kepler installed, you can install &lt;a rel="nofollow" target="_blank" href="https://marketplace.eclipse.org/content/red-hat-jboss-developer-studio-kepler"&gt;JBoss Developer Studio&lt;/a&gt; or &lt;a rel="nofollow" target="_blank" href="https://marketplace.eclipse.org/content/jboss-tools-kepler"&gt;JBoss Tools&lt;/a&gt; from the Eclipse Marketplace via Help &amp;gt; Eclipse Marketplace&amp;#8230;&amp;#8203;&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/blog/images/jbtis-b1.png" alt="jbtis-b1"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/blog/images/jbtis-b1.png" alt="jbtis b1"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;Once Developer Studio is installed, restart Eclipse and select the Software/Update tab in the JBoss Central view and look for the JBoss Developer Studio Integration Stack installation section.  Select the items you&amp;#8217;d like to install:&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/blog/images/jbtis-b2.png" alt="jbtis-b2"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/blog/images/jbtis-b2.png" alt="jbtis b2"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;If you want to try out Savara you will need to use the JBoss Tools Integration Stack URL instead:&lt;/p&gt;
@@ -2623,8 +2767,10 @@
       &lt;/li&gt;
       &lt;/ol&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-9212c.png" alt="JBIDE-9212c"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/server/images/JBIDE-9212c.png" alt="JBIDE 9212c"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;These improvements required significant changes in the server adapter core API and UI. The meat of the code is still the same - just split out to be more reusable and composable.&lt;/p&gt;
@@ -2645,8 +2791,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This means you can create or use an existing cartridge by choosing the "Code Anything" option for either Applications or Cartridges.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/downloadable-cart-type.png" alt="Downloadable Cartridges"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/openshift/images/downloadable-cart-type.png" alt="Downloadable Cartridges"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This allows you to, for example use a Cartridge like &lt;a rel="nofollow" target="_blank" href="https://cartreflect-claytondev.rhcloud.com/reflect?github=openshift-cartridges/openshift-wildfly-cartridge#WildFly8"&gt;WildFly 8&lt;/a&gt; or the recent &lt;a rel="nofollow" target="_blank" href="https://github.com/developercorey/openshift-jrebel-cartridge"&gt;OpenShift on JRebel&lt;/a&gt; experiment without leaving the IDE.&lt;/p&gt;
@@ -2670,8 +2818,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;The Cordova Simulator also now understands the notion of multiple Cordova runtimes allowing you to test against multiple versions.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/browsersim/images/4.2.0.Beta1/CordovaSim-multiple-version-support.png" alt="CordovaSim-multiple-version-support"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/browsersim/images/4.2.0.Beta1/CordovaSim-multiple-version-support.png" alt="CordovaSim multiple version support"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="sect2"&gt;
@@ -2683,8 +2833,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;For now it is a simple structured editor but we plan on using it for experimenting with Sapphire to provide better XML oriented editors.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/arquillian/images/arquillianxmleditor.png" alt="arquillianxmleditor"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/arquillian/images/arquillianxmleditor.png" alt="arquillianxmleditor"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This Arquillian editor was based on ideas and initial contribution from Masao Kunii working for Nippon Telegraph and Telephone Corporation (NTT) - thank you!&lt;/p&gt;
@@ -2699,8 +2851,10 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;Forge 2 Connection Profiles now will consider Eclipse Database Tooling Platform (DTP) connections meaning you no longer have to configure your database settings in multiple places.&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.2.0.Beta1/connection.png" alt="Connection Profiles"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/documentation/whatsnew/forge/images/4.2.0.Beta1/connection.png" alt="Connection Profiles"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;This feature is called connection profiles in Forge 2.&lt;/p&gt;
@@ -2830,14 +2984,18 @@
       &lt;div class="paragraph"&gt;
       &lt;p&gt;To install the Integration Stack tools, first install JBoss Developer Studio from the &lt;a rel="nofollow" target="_blank" href="https://www.jboss.org/products/devstudio.html"&gt;all-in-one installer&lt;/a&gt;, bundled and configured out of the box with everything you need to get started. Alternatively, if you already have eclipse-jee-kepler installed, you can install &lt;a rel="nofollow" target="_blank" href="https://marketplace.eclipse.org/content/red-hat-jboss-developer-studio-kepler"&gt;JBoss Developer Studio&lt;/a&gt; or &lt;a rel="nofollow" target="_blank" href="https://marketplace.eclipse.org/content/jboss-tools-kepler"&gt;JBoss Tools&lt;/a&gt; from the Eclipse Marketplace via Help &amp;gt; Eclipse Marketplace&amp;#8230;&amp;#8203;&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/blog/images/jbtis-b1.png" alt="jbtis-b1"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/blog/images/jbtis-b1.png" alt="jbtis b1"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;Once Developer Studio is installed, restart Eclipse and select the Software/Update tab in the JBoss Central view and look for the JBoss Developer Studio Integration Stack installation section.  Select the items you&amp;#8217;d like to install:&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div class="paragraph"&gt;
-      &lt;p&gt;&lt;span class="image"&gt;&lt;img src="http://tools.jboss.org/blog/images/jbtis-b2.png" alt="jbtis-b2"&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;div class="imageblock"&gt;
+      &lt;div class="content"&gt;
+      &lt;img src="http://tools.jboss.org/blog/images/jbtis-b2.png" alt="jbtis b2"&gt;
+      &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="paragraph"&gt;
       &lt;p&gt;If you want to try out Savara you will need to use the JBoss Tools Integration Stack URL instead:&lt;/p&gt;
@@ -3571,4 +3729,4 @@ Petals Studio was also the pretext to start using <a rel="nofollow" target="_bla
          </media:content>
       <feedburner:origLink>http://mickaelistria.wordpress.com/2012/01/31/goodbye-petalslink-hello-jbossred-hat/</feedburner:origLink></item>
    </channel>
-</rss><!-- fe7.yql.bf1.yahoo.com compressed/chunked Sun Oct  5 11:16:23 UTC 2014 -->
+</rss><!-- fe3.yql.bf1.yahoo.com compressed/chunked Sat Oct 18 07:52:36 UTC 2014 -->

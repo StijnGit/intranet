@@ -1,0 +1,321 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+
+<tiles:insertTemplate template="../templates/template.jsp">
+	<tiles:putAttribute name="content" cascade="true">
+		<div class="content">
+			<div class="tableLeft">
+				<form:form action="heating">
+					<div class="rounded-corners group">
+
+						<table>
+							<tr>
+								<th width="200">Thermostaat:</th>
+								<th width="60">Status:</th>
+							</tr>
+							<tr>
+								<td class="zoneSelect cursor" data-zone="living"><c:out
+										value="${input[0].name}"></c:out></td>
+								<td><form:checkbox path="plcInputData[0].value"
+										cssClass="slider" /></td>
+							</tr>
+							<tr>
+								<td class="zoneSelect cursor" data-zone="badkamer"><c:out
+										value="${input[1].name}"></c:out></td>
+								<td><form:checkbox path="plcInputData[1].value"
+										cssClass="slider" /></td>
+							</tr>
+							<tr>
+								<td class="zoneSelect cursor" data-zone="zolder"><c:out
+										value="${input[2].name}"></c:out></td>
+								<td><form:checkbox path="plcInputData[2].value"
+										cssClass="slider" /></td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<div class="rounded-corners group">
+						<table>
+							<tr>
+								<th width="200">Toestel:</th>
+								<th width="60">Status:</th>
+							</tr>
+							<tr>
+								<td><c:out value="${output[3].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[3].value"
+										cssClass="slider" /></td>
+							</tr>
+							<tr>
+								<td><c:out value="${output[2].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[2].value"
+										cssClass="slider" /></td>
+							</tr>
+							<tr>
+								<td><c:out value="${output[1].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[1].value"
+										cssClass="slider" /></td>
+							</tr>
+							<tr>
+								<td><c:out value="${output[0].name}"></c:out></td>
+								<td><form:checkbox path="plcOutputData[0].value"
+										cssClass="slider" /></td>
+							</tr>
+						</table>
+					</div>
+				</form:form>
+			</div>
+			<div class="tableRight">
+				<form:form id="newHeatingForm" method="post">
+					<div class="rounded-corners group">
+						<table>
+							<tr>
+								<th width="200">Instellingen:</th>
+								<th width="40">Waarde:</th>
+							</tr>
+							<tr>
+								<td>Start regeling:</td>
+								<td><input type="text" id="starttime" name="starttime" class="time"/></td>
+							</tr>
+							<tr>
+								<td>Stop regeling:</td>
+								<td><input type="text" id="stoptime" name="stoptime" class="time"/></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input type="checkbox" name="ma" id="ma" value="true"/><label for="ma">Ma</label> 
+									<input type="checkbox" name="di" id="di" value="true"/><label for="di">Di</label> 
+									<input type="checkbox" name="woe" id="woe" value="true"/><label for="woe">Wo</label>
+									<input type="checkbox" name="don" id="don" value="true"/><label for="don">Do</label>
+									<input type="checkbox" name="vrij" id="vrij" value="true"/><label for="vrij">Vr</label>
+									<input type="checkbox" name="za" id="za" value="true"/><label for="za">Za</label>
+									<input type="checkbox" name="zo" id="zo" value="true"/><label for="zo">Zo</label>
+								</td>
+							</tr>
+							<tr>
+								<td><input id="submitHeatingData" type="button" value="Toevoegen"></td>
+							</tr>
+						</table>
+					</div>
+				</form:form>
+					<br>
+					<div id="HeatingResults">
+					</div>
+			</div>
+		</div>
+	</tiles:putAttribute>
+	<tiles:putAttribute name="footer" cascade="true">
+		<div id="footer">
+			<p>Stijn Claessens 2014 ©</p>
+		</div>
+	</tiles:putAttribute>
+	<tiles:putAttribute name="scripts" cascade="true">
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#newHeatingForm").hide();
+				$(".zoneSelect").click(function() {
+					$("#newHeatingForm").show();
+					zone = $(this).data("zone");
+					loadData();
+				})
+				
+				$("#submitHeatingData").click(function (){
+					var starttime = $("#starttime").timepicker('getSecondsFromMidnight') * 1000 - 3600000;
+					var stoptime = $("#stoptime").timepicker('getSecondsFromMidnight') * 1000 - 3600000;
+					var monday = $("#ma").is(":checked");
+					var tuesday = $("#di").is(":checked");
+					var wednesday = $("#woe").is(":checked");
+					var thursday = $("#don").is(":checked");
+					var friday = $("#vrij").is(":checked");
+					var saturday = $("#za").is(":checked");
+					var sunday = $("#zo").is(":checked");
+					$.ajax({
+						type: "POST",
+					    url: "heating/" + zone,
+					    data: JSON.stringify({
+					    	ma: monday,
+					    	di: tuesday,
+					    	woe: wednesday,
+					    	don: thursday,
+					    	vrij: friday,
+					    	za: saturday,
+					    	zo: sunday,
+					    	starttime: starttime,
+					    	stoptime: stoptime,
+					    	zone: zone
+					    }),
+					    success: function(){
+					    	alert("aaa");
+					    },
+					    dataType: "json",
+					    headers: { 
+					        'Accept': 'application/json',
+					        'Content-Type': 'application/json' 
+					    }
+					});
+					$('#newHeatingForm').each (function(){
+						this.reset();
+					});
+					setTimeout(function() {
+						loadData();
+						
+					}, 100);
+				});
+				
+				$(".tableRight").on("click", ".editButton",function(){
+					var id = $(this).data("id");
+					var starttime = $("#starttime"+id).timepicker('getSecondsFromMidnight') * 1000 - 3600000;
+					var stoptime = $("#stoptime"+id).timepicker('getSecondsFromMidnight') * 1000 - 3600000;
+					var monday = $("#ma"+id).is(":checked");
+					var tuesday = $("#di"+id).is(":checked");
+					var wednesday = $("#woe"+id).is(":checked");
+					var thursday = $("#don"+id).is(":checked");
+					var friday = $("#vrij"+id).is(":checked");
+					var saturday = $("#za"+id).is(":checked");
+					var sunday = $("#zo"+id).is(":checked");
+					$.ajax({
+						type: "POST",
+					    url: "heatingedit",
+					    data: JSON.stringify({
+					    	id: id,
+					    	ma: monday,
+					    	di: tuesday,
+					    	woe: wednesday,
+					    	don: thursday,
+					    	vrij: friday,
+					    	za: saturday,
+					    	zo: sunday,
+					    	starttime: starttime,
+					    	stoptime: stoptime,
+					    	zone: zone
+					    }),
+					    success: function(){
+					    	alert("aaa");
+					    },
+					    dataType: "json",
+					    headers: { 
+					        'Accept': 'application/json',
+					        'Content-Type': 'application/json' 
+					    }
+					});
+		
+				});
+				
+				$(".tableRight").on("click", ".removeButton",function(){
+					var id = $(this).data("id");
+					var starttime = $("#starttime"+id).timepicker('getSecondsFromMidnight') * 1000;
+					var stoptime = $("#stoptime"+id).timepicker('getSecondsFromMidnight') * 1000;
+					var monday = $("#ma"+id).is(":checked");
+					var tuesday = $("#di"+id).is(":checked");
+					var wednesday = $("#woe"+id).is(":checked");
+					var thursday = $("#don"+id).is(":checked");
+					var friday = $("#vrij"+id).is(":checked");
+					var saturday = $("#za"+id).is(":checked");
+					var sunday = $("#zo"+id).is(":checked");
+					$.ajax({
+						type: "POST",
+					    url: "heatingdelete",
+					    data: JSON.stringify({
+					    	id: id,
+					    	ma: monday,
+					    	di: tuesday,
+					    	woe: wednesday,
+					    	don: thursday,
+					    	vrij: friday,
+					    	za: saturday,
+					    	zo: sunday,
+					    	starttime: starttime,
+					    	stoptime: stoptime,
+					    	zone: zone
+					    }),
+					    success: function(){
+					    	alert("aaa");
+					    },
+					    dataType: "json",
+					    headers: { 
+					        'Accept': 'application/json',
+					        'Content-Type': 'application/json' 
+					    }
+					});
+					setTimeout(function() {
+						loadData();
+						
+					}, 100);
+				});
+				
+				function loadData(){
+					$.get("heating/" + zone, function(data) {
+						var source = $("#heatingObj").html();
+						var template = Handlebars.compile(source);
+						var html = template(data);
+						$('#HeatingResults').html(html);
+						$(".time").each(function(){
+							$(this).timepicker();
+							if($(this).val() != ""){
+								$(this).timepicker("setTime", new Date(parseInt($(this).val())));
+							}
+						});
+					});
+				}
+			});
+		</script>
+		<script id="heatingObj" type="text/x-handlebars-template">
+					{{#each this}}
+					<form:form id="editHeatingForm" method="post">
+  						<div class="rounded-corners group">
+							<table>
+								<input type="hidden" id="id{{id}}" value="{{id}}"/>
+								<tr>
+									<th width='200'>
+										Instellingen:
+									</th>
+									<th width='40'>
+										Waarde:
+									</th>
+								</tr>
+								<tr>
+									<td>
+										Start regeling:
+									</td>
+									<td>
+										<input type="text" id="starttime{{id}}"Class="time" value="{{starttime}}"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Stop regeling:
+									</td>
+									<td>
+										<input type='text' id="stoptime{{id}}" class='time' value="{{stoptime}}">
+									</td>
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<input type='checkbox' id="ma{{id}}" {{#if ma}}checked{{/if}} name='maandag' id='1'/><label for="ma">Ma</label>
+										<input type='checkbox' id="di{{id}}" {{#if di}}checked{{/if}} name='dinsdag' id='2'/><label for="di">Di</label> 
+										<input type='checkbox' id="woe{{id}}" {{#if woe}}checked{{/if}} name='woensdag' id='3'/><label for="woe">Wo</label> 
+										<input type='checkbox' id="don{{id}}" {{#if don}}checked{{/if}} name='donderdag' id='4'/><label for="don">Do</label> 
+										<input type='checkbox' id="vrij{{id}}" {{#if vrij}}checked{{/if}} name='vrijdag' id='5'/><label for="vrij">Vr</label> 
+										<input type='checkbox' id="za{{id}}" {{#if za}}checked{{/if}} name='zaterdag' id='6'><label for="za">Za</label> 
+										<input type='checkbox' id="zo{{id}}" {{#if zo}}checked{{/if}} name='zondag' id='7'/><label for="zo">Zo</label>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="button" id="submitHeatingEdit{{id}}" data-id="{{id}}" class="editButton" value="Wijzigen">
+									</td>
+									<td>
+										<input type="button" id="submitHeatingDelete{{id}}" data-id="{{id}}" class="removeButton" value="Verwijderen">
+									</td> 
+								</tr>
+							</table>
+						</div>
+						</form:form>
+						<br>
+					{{/each}}
+		</script>
+	</tiles:putAttribute>
+</tiles:insertTemplate>

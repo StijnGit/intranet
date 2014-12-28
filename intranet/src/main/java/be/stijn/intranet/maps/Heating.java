@@ -30,7 +30,6 @@ public class Heating implements Serializable {
 	private Boolean za;
 	private Boolean zo;
 	
-	
 	public long getId(){
 		return id;
 	}

@@ -69,8 +69,8 @@
 				</form:form>
 			</div>
 			<div class="tableRight">
-				<div class="rounded-corners group">
-					<form:form action="heating" method="post">
+				<form:form id="newHeatingForm" method="post">
+					<div class="rounded-corners group">
 						<table>
 							<tr>
 								<th width="200">Instellingen:</th>
@@ -78,35 +78,32 @@
 							</tr>
 							<tr>
 								<td>Start regeling:</td>
-								<td><form:input type="text" path="" cssClass="time"/></td>
-<%-- 								<td><form:input type="text" path="starttime" cssClass="time"/></td> --%>
+								<td><input type="text" id="starttime" name="starttime" class="time"/></td>
 							</tr>
 							<tr>
 								<td>Stop regeling:</td>
-								<td><input type="text" Class="time"></td>
+								<td><input type="text" id="stoptime" name="stoptime" class="time"/></td>
 							</tr>
 							<tr>
-								<td colspan="2"><input type="checkbox" name="maandag"
-									id="1" value="true">Ma <input type="checkbox"
-									name="dinsdag" id="2" value="true">Di <input
-									type="checkbox" name="woensdag" id="3" value="true">Wo
-									<input type="checkbox" name="donderdag" id="4" value="true">Do
-									<input type="checkbox" name="vrijdag" id="5" value="true">Vr
-									<input type="checkbox" name="zaterdag" id="6" value="true">Za
-									<input type="checkbox" name="zondag" id="7" value="true">Zo
+								<td colspan="2">
+									<input type="checkbox" name="ma" id="ma" value="true"/><label for="ma">Ma</label> 
+									<input type="checkbox" name="di" id="di" value="true"/><label for="di">Di</label> 
+									<input type="checkbox" name="woe" id="woe" value="true"/><label for="woe">Wo</label>
+									<input type="checkbox" name="don" id="don" value="true"/><label for="don">Do</label>
+									<input type="checkbox" name="vrij" id="vrij" value="true"/><label for="vrij">Vr</label>
+									<input type="checkbox" name="za" id="za" value="true"/><label for="za">Za</label>
+									<input type="checkbox" name="zo" id="zo" value="true"/><label for="zo">Zo</label>
 								</td>
 							</tr>
 							<tr>
-								<td><input type="submit" value="Toevoegen"></td>
+								<td><input id="submitHeatingData" type="button" value="Toevoegen"></td>
 							</tr>
 						</table>
-						<table>
-							<tr class="result">
-
-							</tr>
-						</table>
-					</form:form>
-				</div>
+					</div>
+				</form:form>
+					<br>
+					<div id="HeatingResults">
+					</div>
 			</div>
 		</div>
 	</tiles:putAttribute>
@@ -116,17 +113,60 @@
 		</div>
 	</tiles:putAttribute>
 	<tiles:putAttribute name="scripts" cascade="true">
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".zoneSelect").click(function() {
-					var zone = $(this).data("zone");
-					$.get("heating/" + zone, function(data) {
-						debugger;
-						$(".result").html("<td>" + data + "</td>");
-						alert("Load was performed.");
-					});
-				})
-			});
+		<script id="heatingObj" type="text/x-handlebars-template">
+					{{#each this}}
+					<form:form id="editHeatingForm" method="post">
+  						<div class="rounded-corners group">
+							<table>
+								<input type="hidden" id="id{{id}}" value="{{id}}"/>
+								<tr>
+									<th width='200'>
+										Instellingen:
+									</th>
+									<th width='40'>
+										Waarde:
+									</th>
+								</tr>
+								<tr>
+									<td>
+										Start regeling:
+									</td>
+									<td>
+										<input type="text" id="starttime{{id}}"Class="time" value="{{starttime}}"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Stop regeling:
+									</td>
+									<td>
+										<input type='text' id="stoptime{{id}}" class='time' value="{{stoptime}}">
+									</td>
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<input type='checkbox' id="ma{{id}}" {{#if ma}}checked{{/if}} name='maandag' id='1'/><label for="ma">Ma</label>
+										<input type='checkbox' id="di{{id}}" {{#if di}}checked{{/if}} name='dinsdag' id='2'/><label for="di">Di</label> 
+										<input type='checkbox' id="woe{{id}}" {{#if woe}}checked{{/if}} name='woensdag' id='3'/><label for="woe">Wo</label> 
+										<input type='checkbox' id="don{{id}}" {{#if don}}checked{{/if}} name='donderdag' id='4'/><label for="don">Do</label> 
+										<input type='checkbox' id="vrij{{id}}" {{#if vrij}}checked{{/if}} name='vrijdag' id='5'/><label for="vrij">Vr</label> 
+										<input type='checkbox' id="za{{id}}" {{#if za}}checked{{/if}} name='zaterdag' id='6'><label for="za">Za</label> 
+										<input type='checkbox' id="zo{{id}}" {{#if zo}}checked{{/if}} name='zondag' id='7'/><label for="zo">Zo</label>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="button" id="submitHeatingEdit{{id}}" data-id="{{id}}" class="editButton" value="Wijzigen">
+									</td>
+									<td>
+										<input type="button" id="submitHeatingDelete{{id}}" data-id="{{id}}" class="removeButton" value="Verwijderen">
+									</td> 
+								</tr>
+							</table>
+						</div>
+						</form:form>
+						<br>
+					{{/each}}
 		</script>
 	</tiles:putAttribute>
 </tiles:insertTemplate>

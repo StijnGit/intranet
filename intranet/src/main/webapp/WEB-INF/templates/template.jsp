@@ -15,9 +15,11 @@
 <link href="css/jquery.timepicker.css" rel="stylesheet">
 <script src="javascript/jquery-timepicker/jquery.timepicker.js"></script>
 
-<script type="text/javascript"
-	src="javascript/jquery-ui-1.10.1.custom.min.js">
-</script>
+<script type="text/javascript" src="javascript/jquery-ui-1.10.1.custom.min.js"></script>
+
+<script type="text/javascript" src="javascript/handlebars-v2.0.0.js"></script>
+
+<script type="text/javascript" src="javascript/heating/heatingAjax.js"></script>
 
 <script>
 	$(function() {
@@ -38,51 +40,6 @@
 	});
 </script>
 
-
-<script>
-	$(document).ready(function(){
-		$(".ThermLeefruimte").show();
-		$(".ThermBadkamer").hide();
-		$(".ThermZolder").hide();
-		
-		$(".btnLeefruimte").click(function(){
-			if($(".ThermBadkamer").is(":visible")){
-				$(".ThermBadkamer").fadeOut("slow", function(){
-					$(".ThermLeefruimte").fadeIn("slow");
-				});
-			} else if ($(".ThermZolder").is(":visible")){
-				$(".ThermZolder").fadeOut("slow", function(){
-					$(".ThermLeefruimte").fadeIn("slow");
-				});
-			};
-		});
-	
-		$(".btnBadkamer").click(function(){
-			if($(".ThermLeefruimte").is(":visible")){
-				$(".ThermLeefruimte").fadeOut("slow", function(){
-					$(".ThermBadkamer").fadeIn("slow");
-				});
-				
-			} else if ($(".ThermZolder").is(":visible")){
-				$(".ThermZolder").fadeOut("slow", function(){
-					$(".ThermBadkamer").fadeIn("slow");
-				});
-			};
-		});
-		
-		$(".btnZolder").click(function(){
-			if($(".ThermLeefruimte").is(":visible")){
-				$(".ThermLeefruimte").fadeOut("slow", function(){
-					$(".ThermZolder").fadeIn("slow");
-				});
-			} else if ($(".ThermBadkamer").is(":visible")){
-				$(".ThermBadkamer").fadeOut("slow", function(){
-					$(".ThermZolder").fadeIn("slow");
-				});
-			};
-		});
-	});
-</script>
 
 <script>
 $(document).ready(function(){

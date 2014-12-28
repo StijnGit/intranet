@@ -169,7 +169,7 @@
 								<c:out value="${output[4].name}"></c:out>	
 							</td>
 							<td>
-								<form:checkbox id="5" path="plcOutputData[4].value" cssClass="slider"/>
+								<form:checkbox id="4" path="plcOutputData[4].value" cssClass="slider"/>
 							</td>
 						</tr>
 						<tr>
@@ -177,7 +177,7 @@
 								<c:out value="${output[5].name}"></c:out>	
 							</td>
 							<td>
-								<form:checkbox id="6" path="plcOutputData[5].value" cssClass="slider"/>
+								<form:checkbox id="5" path="plcOutputData[5].value" cssClass="slider"/>
 							</td>
 						</tr>
 						<tr>

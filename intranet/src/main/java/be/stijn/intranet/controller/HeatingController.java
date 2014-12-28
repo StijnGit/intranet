@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +21,7 @@ import be.stijn.intranet.service.OutputService;
 
 @Controller
 public class HeatingController {
+	
 	
 	@Autowired
 	private OutputService outputService;
@@ -47,21 +47,15 @@ public class HeatingController {
 		for(Input inp : input){
 			cmd.addPlcInputData(inp);
 		}
-		
-		String zone = "living";
-		List<Heating> heating = heatingService.findByZone(zone);
-		model.addAttribute("heating", heating);
-		for(Heating heat : heating){
-			cmd.addHeatingData(heat);
-		}
-		
+				
 		model.addAttribute("command", cmd);
 		return "/heating";
 	}
 	
-	@RequestMapping(value = {"/heating"}, method = RequestMethod.POST)
-	public String list(@RequestBody Heating heating, @ModelAttribute PlcDataCommand cmd) {
-		
+	@RequestMapping(value = {"/heating/{zone}"}, method = RequestMethod.POST)
+	@ResponseBody
+	public String list(@RequestBody Heating heating, @PathVariable("zone") String zone) {
+		heatingService.addHeating(heating);
 		return "/heating";
 	}
 
@@ -71,6 +65,19 @@ public class HeatingController {
 		List<Heating> heatingData = heatingService.findByZone(zone);
 		return heatingData;
 	}
-
 	
+	@RequestMapping(value= {"/heatingedit"}, method = RequestMethod.POST)
+	@ResponseBody
+	public String edit(@RequestBody Heating heating){
+		heatingService.editHeating(heating);
+		return "/heating";
+	}
+	
+	@RequestMapping(value= {"/heatingdelete"}, method = RequestMethod.POST)
+	@ResponseBody
+	public String delete(@RequestBody Heating heating){
+		heatingService.deleteHeating(heating);
+		return "/heating";
+	}
+
 }

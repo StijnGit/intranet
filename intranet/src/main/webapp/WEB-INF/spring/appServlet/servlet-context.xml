@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/task 
+        http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->
@@ -93,37 +105,42 @@
 	</beans:bean>
 
 	<!-- Cron jobs -->
-	<beans:bean id="runTask" class="be.stijn.intranet.cron.RunTask"></beans:bean>
-	<beans:bean name="runJob" class="org.springframework.scheduling.quartz.JobDetailBean">
-		<beans:property name="jobClass" value="be.stijn.intranet.cron.RunJob" />
-		<beans:property name="jobDataAsMap">
-			<beans:map>
-				<beans:entry key="runTask" value-ref="runTask" />
-			</beans:map>
-		</beans:property>
-	</beans:bean>
-	<beans:bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
-		<beans:property name="jobDetail" ref="runJob" />
-		<beans:property name="repeatInterval" value="5000" />
-		<beans:property name="startDelay" value="1000" />
-	</beans:bean>
-	<beans:bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+<!-- 	<beans:bean id="runTask" class="be.stijn.intranet.cron.RunTask"></beans:bean> -->
+<!-- 	<beans:bean name="runJob" class="org.springframework.scheduling.quartz.JobDetailBean"> -->
+<!-- 		<beans:property name="jobClass" value="be.stijn.intranet.cron.RunJob" /> -->
+<!-- 		<beans:property name="jobDataAsMap"> -->
+<!-- 			<beans:map> -->
+<!-- 				<beans:entry key="runTask" value-ref="runTask" /> -->
+<!-- 			</beans:map> -->
+<!-- 		</beans:property> -->
+<!-- 	</beans:bean> -->
+<!-- 	<beans:bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean"> -->
+<!-- 		<beans:property name="jobDetail" ref="runJob" /> -->
+<!-- 		<beans:property name="repeatInterval" value="30000" /> -->
+<!-- 		<beans:property name="startDelay" value="1000" /> -->
+<!-- 	</beans:bean> -->
+<!-- 	<beans:bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"> -->
 
-		<beans:property name="jobDetail" ref="runJob" />
-		<beans:property name="cronExpression" value="0/5 * * * * ?" />
+<!-- 		<beans:property name="jobDetail" ref="runJob" /> -->
+<!-- 		<beans:property name="cronExpression" value="0/5 * * * * ?" /> -->
 
-	</beans:bean>
-	<beans:bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-		<beans:property name="jobDetails">
-			<beans:list>
-				<beans:ref bean="runJob" />
-			</beans:list>
-		</beans:property>
+<!-- 	</beans:bean> -->
+<!-- 	<beans:bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> -->
+<!-- 		<beans:property name="jobDetails"> -->
+<!-- 			<beans:list> -->
+<!-- 				<beans:ref bean="runJob" /> -->
+<!-- 			</beans:list> -->
+<!-- 		</beans:property> -->
 
-		<beans:property name="triggers">
-			<beans:list>
-				<beans:ref bean="simpleTrigger" />
-			</beans:list>
-		</beans:property>
-	</beans:bean>
+<!-- 		<beans:property name="triggers"> -->
+<!-- 			<beans:list> -->
+<!-- 				<beans:ref bean="simpleTrigger" /> -->
+<!-- 			</beans:list> -->
+<!-- 		</beans:property> -->
+<!-- 	</beans:bean> -->
+
+	<!--Spring scheduling  -->
+	<task:annotation-driven scheduler="myScheduler"/>
+	<task:scheduler id="myScheduler" pool-size="10"/>
+	
 </beans:beans>

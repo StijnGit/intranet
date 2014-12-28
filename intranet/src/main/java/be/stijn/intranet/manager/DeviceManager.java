@@ -52,16 +52,16 @@ public class DeviceManager {
 		return null;
 	}
 	
-	public void writeRequest(eRegion status, int byteNr, byte bitNr) {
+	public void writeRequest(eRegion status, int byteNr, byte bitNr, boolean val) {
 		WriteRequest[] mWriteRequest = new WriteRequest[1];
         mWriteRequest[0] = new WriteRequest();
         mWriteRequest[0].setRegion(status);
         mWriteRequest[0].setStartByte(byteNr);
         mWriteRequest[0].setBit(bitNr);
-        mWriteRequest[0].addBit(true);
+        mWriteRequest[0].addBit(val);
 
 		WriteResult[] res = device.write(mWriteRequest);
 		
-		System.out.println(res[0].Message());
+		//System.out.println(res[0].Message());
 	}	
 }

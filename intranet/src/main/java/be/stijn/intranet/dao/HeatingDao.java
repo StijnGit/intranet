@@ -2,7 +2,7 @@ package be.stijn.intranet.dao;
 
 import java.util.List;
 
-import be.stijn.intranet.maps.Heating;
+import be.stijn.intranet.model.Heating;
 
 
 public interface HeatingDao {

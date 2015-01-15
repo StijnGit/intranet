@@ -6,7 +6,7 @@ import java.util.Date;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import be.stijn.intranet.maps.Heating;
+import be.stijn.intranet.model.Heating;
 
 public class HeatingDTO implements Serializable{
 

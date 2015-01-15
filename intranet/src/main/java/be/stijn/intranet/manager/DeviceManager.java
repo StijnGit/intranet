@@ -62,6 +62,6 @@ public class DeviceManager {
 
 		WriteResult[] res = device.write(mWriteRequest);
 		
-		//System.out.println(res[0].Message());
+		System.out.println(res[0].Message());
 	}	
 }

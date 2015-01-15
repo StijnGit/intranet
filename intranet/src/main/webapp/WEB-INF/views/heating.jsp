@@ -11,28 +11,63 @@
 			<div class="tableLeft">
 				<form:form action="heating">
 					<div class="rounded-corners group">
-
-						<table>
+						<table class="zoneSelect cursor" data-zone="living">
 							<tr>
-								<th width="200">Thermostaat:</th>
+								<th width="200">Leefruimte:</th>
 								<th width="60">Status:</th>
 							</tr>
 							<tr>
-								<td class="zoneSelect cursor" data-zone="living"><c:out
-										value="${input[0].name}"></c:out></td>
+								<td><c:out
+										value="Thermostaat"></c:out></td>
 								<td><form:checkbox path="plcInputData[0].value"
-										cssClass="slider" /></td>
+										cssClass="slider" readonly="true"/></td>
 							</tr>
 							<tr>
-								<td class="zoneSelect cursor" data-zone="badkamer"><c:out
-										value="${input[1].name}"></c:out></td>
+								<td><c:out
+										value="Tijdsturing"></c:out></td>
+								<td><form:checkbox id="40" path="plcMerkerData[32].value"
+										cssClass="slider" /></td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<div class="rounded-corners group">		
+						<table class="zoneSelect cursor" data-zone="badkamer">
+							<tr>
+								<th width="200">Badkamer:</th>
+								<th width="60">Status:</th>
+							</tr>
+							<tr>
+								<td><c:out
+										value="Thermostaat"></c:out></td>
 								<td><form:checkbox path="plcInputData[1].value"
-										cssClass="slider" /></td>
+										cssClass="slider" readonly="true"/></td>
 							</tr>
 							<tr>
-								<td class="zoneSelect cursor" data-zone="zolder"><c:out
-										value="${input[2].name}"></c:out></td>
+								<td><c:out
+										value="Tijdsturing"></c:out></td>
+								<td><form:checkbox id="41" path="plcMerkerData[33].value"
+										cssClass="slider" /></td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<div class="rounded-corners group">
+						<table class="zoneSelect cursor" data-zone="zolder">
+							<tr>
+								<th width="200">Zolder:</th>
+								<th width="60">Status:</th>
+							</tr>
+							<tr>
+								<td><c:out
+										value="Thermostaat"></c:out></td>
 								<td><form:checkbox path="plcInputData[2].value"
+										cssClass="slider" readonly="true"/></td>
+							</tr>
+							<tr>
+								<td ><c:out
+										value="Tijdsturing"></c:out></td>
+								<td><form:checkbox id="42" path="plcMerkerData[34].value"
 										cssClass="slider" /></td>
 							</tr>
 						</table>
@@ -47,22 +82,22 @@
 							<tr>
 								<td><c:out value="${output[3].name}"></c:out></td>
 								<td><form:checkbox path="plcOutputData[3].value"
-										cssClass="slider" /></td>
+										cssClass="slider" readonly="true"/></td>
 							</tr>
 							<tr>
 								<td><c:out value="${output[2].name}"></c:out></td>
 								<td><form:checkbox path="plcOutputData[2].value"
-										cssClass="slider" /></td>
+										cssClass="slider" readonly="true"/></td>
 							</tr>
 							<tr>
 								<td><c:out value="${output[1].name}"></c:out></td>
 								<td><form:checkbox path="plcOutputData[1].value"
-										cssClass="slider" /></td>
+										cssClass="slider" readonly="true"/></td>
 							</tr>
 							<tr>
 								<td><c:out value="${output[0].name}"></c:out></td>
 								<td><form:checkbox path="plcOutputData[0].value"
-										cssClass="slider" /></td>
+										cssClass="slider" readonly="true"/></td>
 							</tr>
 						</table>
 					</div>
@@ -113,6 +148,8 @@
 		</div>
 	</tiles:putAttribute>
 	<tiles:putAttribute name="scripts" cascade="true">
+		<script type="text/javascript" src="javascript/heating/heatingAjax.js"></script>
+	
 		<script id="heatingObj" type="text/x-handlebars-template">
 					{{#each this}}
 					<form:form id="editHeatingForm" method="post">

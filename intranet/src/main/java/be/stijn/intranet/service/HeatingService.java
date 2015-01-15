@@ -2,7 +2,7 @@ package be.stijn.intranet.service;
 
 import java.util.List;
 
-import be.stijn.intranet.maps.Heating;
+import be.stijn.intranet.model.Heating;
 
 public interface HeatingService {
 	List<Heating> findByZone(String zone);

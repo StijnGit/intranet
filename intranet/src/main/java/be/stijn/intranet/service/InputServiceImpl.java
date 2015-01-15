@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import PLCCom.eRegion;
 import be.stijn.intranet.dao.InputDao;
 import be.stijn.intranet.manager.DeviceManager;
-import be.stijn.intranet.maps.Input;
+import be.stijn.intranet.model.Input;
 
 @Service
 public class InputServiceImpl implements InputService{

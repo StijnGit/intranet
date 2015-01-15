@@ -58,8 +58,11 @@ public final class template_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
       out.write("<link rel=\"stylesheet\" href=\"css/mystyle.css\" type=\"text/css\">\n");
+      out.write("\n");
       out.write("<script type=\"text/JavaScript\" src=\"javascript/jquery-1.9.1.min.js\"></script>\n");
+      out.write("\n");
       out.write("<link rel=\"stylesheet\" href=\"css/jquery-ui-1.10.1.custom.css\" type=\"text/css\">\n");
+      out.write("<script type=\"text/javascript\" src=\"javascript/jquery-ui-1.10.1.custom.min.js\"></script>\n");
       out.write("\n");
       out.write("<link href=\"css/bootstrap3/bootstrap-switch.css\" rel=\"stylesheet\">\n");
       out.write("<script src=\"javascript/bootstrap-switch-3.0.2/dist/js/bootstrap-switch.js\"></script>\n");
@@ -67,11 +70,8 @@ public final class template_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<link href=\"css/jquery.timepicker.css\" rel=\"stylesheet\">\n");
       out.write("<script src=\"javascript/jquery-timepicker/jquery.timepicker.js\"></script>\n");
       out.write("\n");
-      out.write("<script type=\"text/javascript\" src=\"javascript/jquery-ui-1.10.1.custom.min.js\"></script>\n");
-      out.write("\n");
       out.write("<script type=\"text/javascript\" src=\"javascript/handlebars-v2.0.0.js\"></script>\n");
       out.write("\n");
-      out.write("<script type=\"text/javascript\" src=\"javascript/heating/heatingAjax.js\"></script>\n");
       out.write("\n");
       out.write("<script>\n");
       out.write("\t$(function() {\n");

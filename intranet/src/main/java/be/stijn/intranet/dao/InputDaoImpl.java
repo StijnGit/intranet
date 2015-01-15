@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import be.stijn.intranet.maps.Input;
+import be.stijn.intranet.model.Input;
 
 @Repository
 public class InputDaoImpl implements InputDao{

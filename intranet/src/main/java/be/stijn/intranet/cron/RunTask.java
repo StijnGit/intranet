@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import PLCCom.eRegion;
 import be.stijn.intranet.dao.HeatingDao;
 import be.stijn.intranet.manager.DeviceManager;
-import be.stijn.intranet.maps.Heating;
+import be.stijn.intranet.model.Heating;
 
 @Component
 public class RunTask {
@@ -80,16 +80,18 @@ public class RunTask {
 			switch (day) {
 			case 1:
 				if(heatingBlock.getMa() == true){
-					if(time == timeCutOn){
+					if(time.equals(timeCutOn)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("Verwaarming maandag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming maandag uit" + time);
 						}
 					}
 				}
@@ -101,92 +103,105 @@ public class RunTask {
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("Verwarming dinsdag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming dinsdag uit" + time);
 						}
 					}
 				}
 			break;
 			case 3:
+				//System.out.println( "system tijd:" + time + "  DB tijd:" + timeCutOn);
 				if(heatingBlock.getWoe() == true){
-					if(time == timeCutOn){
+					if(time.equals(timeCutOn)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("Verwarming woensdag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming woensdag uit" + time);
 						}
 					}
 				}
 			break;
 			case 4:
 				if(heatingBlock.getDon() == true){
-					if(time == timeCutOn){
+					if(time.equals(timeCutOn)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("verwarming donderdag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming dondedag uit" + time);
 						}
 					}
 				}
 			break;
 			case 5:
 				if(heatingBlock.getVrij() == true){
-					if(time == timeCutOn){
+					if(time.equals(timeCutOn)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("Verwarming vrijdag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming vrijdag uit" + time);
 						}
 					}
 				}
 			break;
 			case 6:
 				if(heatingBlock.getZa() == true){
-					if(time == timeCutOn){
+					if(time.equals(timeCutOn)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("Verwarming zaterdag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming zaterdag uit" + time);
 						}
 					}
 				}
 			break;
 			case 7:
 				if(heatingBlock.getZo() == true){
-					if(time == timeCutOn){
+					if(time.equals(timeCutOn)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, true);
 							plc.disconnect();
+							System.out.println("Verwarming zondag aan" + time);
 						}
 					}
-					if(time == timeCutOff){
+					if(time.equals(timeCutOff)){
 						if (plc.connect().HasConnected()){
 							plc.writeRequest(eRegion.Flags_Markers, 200, bitNr, false);
 							plc.disconnect();
+							System.out.println("Verwarming zondag uit" + time);
 						}
 					}
 				}

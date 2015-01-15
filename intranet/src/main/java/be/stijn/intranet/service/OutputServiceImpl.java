@@ -7,11 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import PLCCom.eRegion;
 import be.stijn.intranet.dao.OutputDao;
 import be.stijn.intranet.manager.DeviceManager;
-import be.stijn.intranet.maps.Output;
+import be.stijn.intranet.model.Output;
 
 @Service
 public class OutputServiceImpl implements OutputService {

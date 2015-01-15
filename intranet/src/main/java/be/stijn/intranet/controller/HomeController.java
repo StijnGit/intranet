@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import be.stijn.intranet.maps.Input;
+import be.stijn.intranet.model.Input;
 import be.stijn.intranet.service.InputService;
 
 

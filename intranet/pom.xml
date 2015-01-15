@@ -202,21 +202,18 @@
 			<version>2.2.2</version>
 		</dependency>
 
-		<!-- Restful web service -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>gs-rest-service</artifactId> -->
-		<!-- <version>0.1.0</version> -->
-		<!-- </dependency> -->
-
 		<!-- Jackson JSON Response -->
-
-
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.13</version>
 		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.fasterxml.jackson.core</groupId> -->
+<!-- 			<artifactId>jackson-core</artifactId> -->
+<!-- 			<version>2.4.4</version> -->
+<!-- 		</dependency> -->
 
 		<!-- Cron jobs -->
 		<dependency>

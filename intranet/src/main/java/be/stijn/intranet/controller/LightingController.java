@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import be.stijn.intranet.command.PlcDataCommand;
-import be.stijn.intranet.maps.Output;
+import be.stijn.intranet.model.Output;
 import be.stijn.intranet.service.MerkerService;
 import be.stijn.intranet.service.OutputService;
 

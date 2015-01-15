@@ -2,7 +2,7 @@ package be.stijn.intranet.service;
 
 import java.util.List;
 
-import be.stijn.intranet.maps.Output;
+import be.stijn.intranet.model.Output;
 
 public interface OutputService {
 	List<Output> findAll();

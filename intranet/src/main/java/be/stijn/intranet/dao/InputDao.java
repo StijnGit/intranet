@@ -2,7 +2,7 @@ package be.stijn.intranet.dao;
 
 import java.util.List;
 
-import be.stijn.intranet.maps.Input;
+import be.stijn.intranet.model.Input;
 
 public interface InputDao {
 

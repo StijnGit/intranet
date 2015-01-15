@@ -3,10 +3,10 @@ package be.stijn.intranet.command;
 import java.util.ArrayList;
 import java.util.List;
 
-import be.stijn.intranet.maps.Heating;
-import be.stijn.intranet.maps.Input;
-import be.stijn.intranet.maps.Merker;
-import be.stijn.intranet.maps.Output;
+import be.stijn.intranet.model.Heating;
+import be.stijn.intranet.model.Input;
+import be.stijn.intranet.model.Merker;
+import be.stijn.intranet.model.Output;
 
 public class PlcDataCommand {
 	

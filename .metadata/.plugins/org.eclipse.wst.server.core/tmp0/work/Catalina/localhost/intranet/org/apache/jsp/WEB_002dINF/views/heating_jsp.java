@@ -13,7 +13,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005faction;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fid;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
@@ -26,7 +27,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
   public void _jspInit() {
     _005fjspx_005ftagPool_005fform_005fform_0026_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fid = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
@@ -35,7 +37,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
   public void _jspDestroy() {
     _005fjspx_005ftagPool_005fform_005fform_0026_005faction.release();
     _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.release();
-    _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.release();
+    _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.release();
+    _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.release();
     _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fid.release();
   }
 
@@ -135,14 +138,13 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\n");
           out.write("\t\t\t\t\t<div class=\"rounded-corners group\">\n");
-          out.write("\n");
-          out.write("\t\t\t\t\t\t<table>\n");
+          out.write("\t\t\t\t\t\t<table class=\"zoneSelect cursor\" data-zone=\"living\">\n");
           out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<th width=\"200\">Thermostaat:</th>\n");
+          out.write("\t\t\t\t\t\t\t\t<th width=\"200\">Leefruimte:</th>\n");
           out.write("\t\t\t\t\t\t\t\t<th width=\"60\">Status:</th>\n");
           out.write("\t\t\t\t\t\t\t</tr>\n");
           out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<td class=\"zoneSelect cursor\" data-zone=\"living\">");
+          out.write("\t\t\t\t\t\t\t\t<td>");
           if (_jspx_meth_c_005fout_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
@@ -152,7 +154,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("</td>\n");
           out.write("\t\t\t\t\t\t\t</tr>\n");
           out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<td class=\"zoneSelect cursor\" data-zone=\"badkamer\">");
+          out.write("\t\t\t\t\t\t\t\t<td>");
           if (_jspx_meth_c_005fout_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
@@ -161,13 +163,61 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
             return true;
           out.write("</td>\n");
           out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t</table>\n");
+          out.write("\t\t\t\t\t</div>\n");
+          out.write("\t\t\t\t\t<br>\n");
+          out.write("\t\t\t\t\t<div class=\"rounded-corners group\">\t\t\n");
+          out.write("\t\t\t\t\t\t<table class=\"zoneSelect cursor\" data-zone=\"badkamer\">\n");
           out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<td class=\"zoneSelect cursor\" data-zone=\"zolder\">");
+          out.write("\t\t\t\t\t\t\t\t<th width=\"200\">Badkamer:</th>\n");
+          out.write("\t\t\t\t\t\t\t\t<th width=\"60\">Status:</th>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
           if (_jspx_meth_c_005fout_005f2(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
           out.write("\t\t\t\t\t\t\t\t<td>");
           if (_jspx_meth_form_005fcheckbox_005f2(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_c_005fout_005f3(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_form_005fcheckbox_005f3(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t</table>\n");
+          out.write("\t\t\t\t\t</div>\n");
+          out.write("\t\t\t\t\t<br>\n");
+          out.write("\t\t\t\t\t<div class=\"rounded-corners group\">\n");
+          out.write("\t\t\t\t\t\t<table class=\"zoneSelect cursor\" data-zone=\"zolder\">\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<th width=\"200\">Zolder:</th>\n");
+          out.write("\t\t\t\t\t\t\t\t<th width=\"60\">Status:</th>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_c_005fout_005f4(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_form_005fcheckbox_005f4(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td >");
+          if (_jspx_meth_c_005fout_005f5(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_form_005fcheckbox_005f5(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
           out.write("\t\t\t\t\t\t\t</tr>\n");
@@ -182,41 +232,41 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\t\t\t\t\t\t\t</tr>\n");
           out.write("\t\t\t\t\t\t\t<tr>\n");
           out.write("\t\t\t\t\t\t\t\t<td>");
-          if (_jspx_meth_c_005fout_005f3(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
-            return true;
-          out.write("</td>\n");
-          out.write("\t\t\t\t\t\t\t\t<td>");
-          if (_jspx_meth_form_005fcheckbox_005f3(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
-            return true;
-          out.write("</td>\n");
-          out.write("\t\t\t\t\t\t\t</tr>\n");
-          out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<td>");
-          if (_jspx_meth_c_005fout_005f4(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
-            return true;
-          out.write("</td>\n");
-          out.write("\t\t\t\t\t\t\t\t<td>");
-          if (_jspx_meth_form_005fcheckbox_005f4(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
-            return true;
-          out.write("</td>\n");
-          out.write("\t\t\t\t\t\t\t</tr>\n");
-          out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<td>");
-          if (_jspx_meth_c_005fout_005f5(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
-            return true;
-          out.write("</td>\n");
-          out.write("\t\t\t\t\t\t\t\t<td>");
-          if (_jspx_meth_form_005fcheckbox_005f5(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
-            return true;
-          out.write("</td>\n");
-          out.write("\t\t\t\t\t\t\t</tr>\n");
-          out.write("\t\t\t\t\t\t\t<tr>\n");
-          out.write("\t\t\t\t\t\t\t\t<td>");
           if (_jspx_meth_c_005fout_005f6(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
           out.write("\t\t\t\t\t\t\t\t<td>");
           if (_jspx_meth_form_005fcheckbox_005f6(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_c_005fout_005f7(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_form_005fcheckbox_005f7(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_c_005fout_005f8(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_form_005fcheckbox_005f8(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t</tr>\n");
+          out.write("\t\t\t\t\t\t\t<tr>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_c_005fout_005f9(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("\t\t\t\t\t\t\t\t<td>");
+          if (_jspx_meth_form_005fcheckbox_005f9(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
           out.write("\t\t\t\t\t\t\t</tr>\n");
@@ -250,8 +300,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(21,57) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${input[0].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(20,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f0.setValue(new String("Thermostaat"));
     int _jspx_eval_c_005fout_005f0 = _jspx_th_c_005fout_005f0.doStartTag();
     if (_jspx_th_c_005fout_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f0);
@@ -266,13 +316,15 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f0 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f0 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(23,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(22,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f0.setPath("plcInputData[0].value");
-    // /WEB-INF/views/heating.jsp(23,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(22,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f0.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(22,12) null
+    _jspx_th_form_005fcheckbox_005f0.setDynamicAttribute(null, "readonly", new String("true"));
     int[] _jspx_push_body_count_form_005fcheckbox_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_form_005fcheckbox_005f0 = _jspx_th_form_005fcheckbox_005f0.doStartTag();
@@ -285,7 +337,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f0.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f0.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f0);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f0);
     }
     return false;
   }
@@ -298,8 +350,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f1 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(27,59) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${input[1].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(26,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f1.setValue(new String("Tijdsturing"));
     int _jspx_eval_c_005fout_005f1 = _jspx_th_c_005fout_005f1.doStartTag();
     if (_jspx_th_c_005fout_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f1);
@@ -314,12 +366,14 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f1 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f1 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(29,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fcheckbox_005f1.setPath("plcInputData[1].value");
-    // /WEB-INF/views/heating.jsp(29,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(28,12) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f1.setId("40");
+    // /WEB-INF/views/heating.jsp(28,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f1.setPath("plcMerkerData[32].value");
+    // /WEB-INF/views/heating.jsp(28,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f1.setCssClass("slider");
     int[] _jspx_push_body_count_form_005fcheckbox_005f1 = new int[] { 0 };
     try {
@@ -333,7 +387,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f1.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f1.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f1);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f1);
     }
     return false;
   }
@@ -346,8 +400,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f2 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(33,57) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${input[2].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(41,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f2.setValue(new String("Thermostaat"));
     int _jspx_eval_c_005fout_005f2 = _jspx_th_c_005fout_005f2.doStartTag();
     if (_jspx_th_c_005fout_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f2);
@@ -362,13 +416,15 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f2 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f2 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f2.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(35,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fcheckbox_005f2.setPath("plcInputData[2].value");
-    // /WEB-INF/views/heating.jsp(35,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(43,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f2.setPath("plcInputData[1].value");
+    // /WEB-INF/views/heating.jsp(43,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f2.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(43,12) null
+    _jspx_th_form_005fcheckbox_005f2.setDynamicAttribute(null, "readonly", new String("true"));
     int[] _jspx_push_body_count_form_005fcheckbox_005f2 = new int[] { 0 };
     try {
       int _jspx_eval_form_005fcheckbox_005f2 = _jspx_th_form_005fcheckbox_005f2.doStartTag();
@@ -381,7 +437,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f2.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f2.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f2);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f2);
     }
     return false;
   }
@@ -394,8 +450,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f3 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f3.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(48,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[3].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(47,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f3.setValue(new String("Tijdsturing"));
     int _jspx_eval_c_005fout_005f3 = _jspx_th_c_005fout_005f3.doStartTag();
     if (_jspx_th_c_005fout_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f3);
@@ -410,11 +466,13 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f3 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f3 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f3.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(49,12) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f3.setId("41");
     // /WEB-INF/views/heating.jsp(49,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fcheckbox_005f3.setPath("plcOutputData[3].value");
+    _jspx_th_form_005fcheckbox_005f3.setPath("plcMerkerData[33].value");
     // /WEB-INF/views/heating.jsp(49,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f3.setCssClass("slider");
     int[] _jspx_push_body_count_form_005fcheckbox_005f3 = new int[] { 0 };
@@ -429,7 +487,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f3.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f3.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f3);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f3);
     }
     return false;
   }
@@ -442,8 +500,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f4 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f4.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(53,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f4.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[2].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(62,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f4.setValue(new String("Thermostaat"));
     int _jspx_eval_c_005fout_005f4 = _jspx_th_c_005fout_005f4.doStartTag();
     if (_jspx_th_c_005fout_005f4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f4);
@@ -458,13 +516,15 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f4 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f4 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f4.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(54,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fcheckbox_005f4.setPath("plcOutputData[2].value");
-    // /WEB-INF/views/heating.jsp(54,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(64,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f4.setPath("plcInputData[2].value");
+    // /WEB-INF/views/heating.jsp(64,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f4.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(64,12) null
+    _jspx_th_form_005fcheckbox_005f4.setDynamicAttribute(null, "readonly", new String("true"));
     int[] _jspx_push_body_count_form_005fcheckbox_005f4 = new int[] { 0 };
     try {
       int _jspx_eval_form_005fcheckbox_005f4 = _jspx_th_form_005fcheckbox_005f4.doStartTag();
@@ -477,7 +537,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f4.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f4.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f4);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f4);
     }
     return false;
   }
@@ -490,8 +550,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f5 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f5.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(58,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[1].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(68,13) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f5.setValue(new String("Tijdsturing"));
     int _jspx_eval_c_005fout_005f5 = _jspx_th_c_005fout_005f5.doStartTag();
     if (_jspx_th_c_005fout_005f5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f5);
@@ -506,12 +566,14 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f5 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f5 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f5.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(59,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fcheckbox_005f5.setPath("plcOutputData[1].value");
-    // /WEB-INF/views/heating.jsp(59,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(70,12) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f5.setId("42");
+    // /WEB-INF/views/heating.jsp(70,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f5.setPath("plcMerkerData[34].value");
+    // /WEB-INF/views/heating.jsp(70,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f5.setCssClass("slider");
     int[] _jspx_push_body_count_form_005fcheckbox_005f5 = new int[] { 0 };
     try {
@@ -525,7 +587,7 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f5.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f5.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f5);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fid_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f5);
     }
     return false;
   }
@@ -538,8 +600,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f6 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_005fout_005f6.setPageContext(_jspx_page_context);
     _jspx_th_c_005fout_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(63,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fout_005f6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[0].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    // /WEB-INF/views/heating.jsp(83,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[3].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int _jspx_eval_c_005fout_005f6 = _jspx_th_c_005fout_005f6.doStartTag();
     if (_jspx_th_c_005fout_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f6);
@@ -554,13 +616,15 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:checkbox
-    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f6 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f6 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f6.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/views/heating.jsp(64,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fcheckbox_005f6.setPath("plcOutputData[0].value");
-    // /WEB-INF/views/heating.jsp(64,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(84,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f6.setPath("plcOutputData[3].value");
+    // /WEB-INF/views/heating.jsp(84,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f6.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(84,12) null
+    _jspx_th_form_005fcheckbox_005f6.setDynamicAttribute(null, "readonly", new String("true"));
     int[] _jspx_push_body_count_form_005fcheckbox_005f6 = new int[] { 0 };
     try {
       int _jspx_eval_form_005fcheckbox_005f6 = _jspx_th_form_005fcheckbox_005f6.doStartTag();
@@ -573,7 +637,157 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fcheckbox_005f6.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fcheckbox_005f6.doFinally();
-      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f6);
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f6);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fout_005f7(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f7 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_005fout_005f7.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fout_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(88,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[2].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    int _jspx_eval_c_005fout_005f7 = _jspx_th_c_005fout_005f7.doStartTag();
+    if (_jspx_th_c_005fout_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f7);
+      throw new SkipPageException();
+    }
+    _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f7);
+    return false;
+  }
+
+  private boolean _jspx_meth_form_005fcheckbox_005f7(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:checkbox
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f7 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    _jspx_th_form_005fcheckbox_005f7.setPageContext(_jspx_page_context);
+    _jspx_th_form_005fcheckbox_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(89,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f7.setPath("plcOutputData[2].value");
+    // /WEB-INF/views/heating.jsp(89,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f7.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(89,12) null
+    _jspx_th_form_005fcheckbox_005f7.setDynamicAttribute(null, "readonly", new String("true"));
+    int[] _jspx_push_body_count_form_005fcheckbox_005f7 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005fcheckbox_005f7 = _jspx_th_form_005fcheckbox_005f7.doStartTag();
+      if (_jspx_th_form_005fcheckbox_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        throw new SkipPageException();
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005fcheckbox_005f7[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005fcheckbox_005f7.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005fcheckbox_005f7.doFinally();
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f7);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fout_005f8(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f8 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_005fout_005f8.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fout_005f8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(93,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f8.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[1].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    int _jspx_eval_c_005fout_005f8 = _jspx_th_c_005fout_005f8.doStartTag();
+    if (_jspx_th_c_005fout_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f8);
+      throw new SkipPageException();
+    }
+    _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f8);
+    return false;
+  }
+
+  private boolean _jspx_meth_form_005fcheckbox_005f8(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:checkbox
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f8 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    _jspx_th_form_005fcheckbox_005f8.setPageContext(_jspx_page_context);
+    _jspx_th_form_005fcheckbox_005f8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(94,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f8.setPath("plcOutputData[1].value");
+    // /WEB-INF/views/heating.jsp(94,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f8.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(94,12) null
+    _jspx_th_form_005fcheckbox_005f8.setDynamicAttribute(null, "readonly", new String("true"));
+    int[] _jspx_push_body_count_form_005fcheckbox_005f8 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005fcheckbox_005f8 = _jspx_th_form_005fcheckbox_005f8.doStartTag();
+      if (_jspx_th_form_005fcheckbox_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        throw new SkipPageException();
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005fcheckbox_005f8[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005fcheckbox_005f8.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005fcheckbox_005f8.doFinally();
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f8);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fout_005f9(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_005fout_005f9 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_005fout_005f9.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fout_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(98,12) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fout_005f9.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${output[0].name}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    int _jspx_eval_c_005fout_005f9 = _jspx_th_c_005fout_005f9.doStartTag();
+    if (_jspx_th_c_005fout_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f9);
+      throw new SkipPageException();
+    }
+    _005fjspx_005ftagPool_005fc_005fout_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005fout_005f9);
+    return false;
+  }
+
+  private boolean _jspx_meth_form_005fcheckbox_005f9(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:checkbox
+    org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f9 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
+    _jspx_th_form_005fcheckbox_005f9.setPageContext(_jspx_page_context);
+    _jspx_th_form_005fcheckbox_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/views/heating.jsp(99,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f9.setPath("plcOutputData[0].value");
+    // /WEB-INF/views/heating.jsp(99,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fcheckbox_005f9.setCssClass("slider");
+    // /WEB-INF/views/heating.jsp(99,12) null
+    _jspx_th_form_005fcheckbox_005f9.setDynamicAttribute(null, "readonly", new String("true"));
+    int[] _jspx_push_body_count_form_005fcheckbox_005f9 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005fcheckbox_005f9 = _jspx_th_form_005fcheckbox_005f9.doStartTag();
+      if (_jspx_th_form_005fcheckbox_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        throw new SkipPageException();
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005fcheckbox_005f9[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005fcheckbox_005f9.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005fcheckbox_005f9.doFinally();
+      _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005freadonly_005fpath_005fcssClass_005fnobody.reuse(_jspx_th_form_005fcheckbox_005f9);
     }
     return false;
   }
@@ -586,9 +800,9 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f1 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fid.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f1.setParent(new javax.servlet.jsp.tagext.TagAdapter((javax.servlet.jsp.tagext.SimpleTag) _jspx_parent));
-    // /WEB-INF/views/heating.jsp(72,4) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(107,4) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f1.setId("newHeatingForm");
-    // /WEB-INF/views/heating.jsp(72,4) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(107,4) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f1.setMethod("post");
     int[] _jspx_push_body_count_form_005fform_005f1 = new int[] { 0 };
     try {
@@ -655,9 +869,9 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.jasper.runtime.AnnotationHelper.postConstruct(_jsp_annotationprocessor, _jspx_th_tiles_005fputAttribute_005f1);
     _jspx_th_tiles_005fputAttribute_005f1.setJspContext(_jspx_page_context);
     _jspx_th_tiles_005fputAttribute_005f1.setParent(_jspx_parent);
-    // /WEB-INF/views/heating.jsp(110,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(145,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_tiles_005fputAttribute_005f1.setName("footer");
-    // /WEB-INF/views/heating.jsp(110,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(145,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_tiles_005fputAttribute_005f1.setCascade(true);
     _jspx_th_tiles_005fputAttribute_005f1.setJspBody(new Helper( 2, _jspx_page_context, _jspx_th_tiles_005fputAttribute_005f1, null));
     _jspx_th_tiles_005fputAttribute_005f1.doTag();
@@ -674,9 +888,9 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.jasper.runtime.AnnotationHelper.postConstruct(_jsp_annotationprocessor, _jspx_th_tiles_005fputAttribute_005f2);
     _jspx_th_tiles_005fputAttribute_005f2.setJspContext(_jspx_page_context);
     _jspx_th_tiles_005fputAttribute_005f2.setParent(_jspx_parent);
-    // /WEB-INF/views/heating.jsp(115,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(150,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_tiles_005fputAttribute_005f2.setName("scripts");
-    // /WEB-INF/views/heating.jsp(115,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(150,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_tiles_005fputAttribute_005f2.setCascade(true);
     _jspx_th_tiles_005fputAttribute_005f2.setJspBody(new Helper( 3, _jspx_page_context, _jspx_th_tiles_005fputAttribute_005f2, null));
     _jspx_th_tiles_005fputAttribute_005f2.doTag();
@@ -692,9 +906,9 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f2 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmethod_005fid.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f2.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f2.setParent(new javax.servlet.jsp.tagext.TagAdapter((javax.servlet.jsp.tagext.SimpleTag) _jspx_parent));
-    // /WEB-INF/views/heating.jsp(119,5) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(155,5) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f2.setId("editHeatingForm");
-    // /WEB-INF/views/heating.jsp(119,5) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/heating.jsp(155,5) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f2.setMethod("post");
     int[] _jspx_push_body_count_form_005fform_005f2 = new int[] { 0 };
     try {
@@ -837,7 +1051,8 @@ public final class heating_jsp extends org.apache.jasper.runtime.HttpJspBase
       throws Throwable
     {
       out.write("\n");
-      out.write("\n");
+      out.write("\t\t<script type=\"text/javascript\" src=\"javascript/heating/heatingAjax.js\"></script>\n");
+      out.write("\t\n");
       out.write("\t\t<script id=\"heatingObj\" type=\"text/x-handlebars-template\">\n");
       out.write("\t\t\t\t\t{{#each this}}\n");
       out.write("\t\t\t\t\t");

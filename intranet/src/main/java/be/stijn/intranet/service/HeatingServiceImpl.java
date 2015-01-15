@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import be.stijn.intranet.dao.HeatingDao;
 import be.stijn.intranet.dao.MerkerDaoImpl;
 import be.stijn.intranet.manager.DeviceManager;
-import be.stijn.intranet.maps.Heating;
+import be.stijn.intranet.model.Heating;
 
 @Service
 public class HeatingServiceImpl implements HeatingService {

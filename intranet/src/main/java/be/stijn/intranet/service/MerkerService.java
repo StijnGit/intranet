@@ -2,7 +2,7 @@ package be.stijn.intranet.service;
 
 import java.util.List;
 
-import be.stijn.intranet.maps.Merker;
+import be.stijn.intranet.model.Merker;
 
 public interface MerkerService {
 	List<Merker> findAll();

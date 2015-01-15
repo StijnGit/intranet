@@ -233,7 +233,8 @@
 				</div>
 			</form:form>
 		</div>
-		
+	</tiles:putAttribute>
+	<tiles:putAttribute name="scripts" cascade="true">
 		<script type="text/javascript">
 			$(".slider").on('switchChange.bootstrapSwitch', function (e, data){
 				var nr = $(this).attr("id");
@@ -253,7 +254,6 @@
 				});
 			});
 		</script>
-		
 	</tiles:putAttribute>
 	<tiles:putAttribute name="footer" cascade="true">
 		<div id="footer">

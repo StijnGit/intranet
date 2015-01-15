@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import be.stijn.intranet.command.PlcDataCommand;
-import be.stijn.intranet.maps.Heating;
-import be.stijn.intranet.maps.Input;
-import be.stijn.intranet.maps.Output;
+import be.stijn.intranet.model.Heating;
+import be.stijn.intranet.model.Input;
+import be.stijn.intranet.model.Merker;
+import be.stijn.intranet.model.Output;
 import be.stijn.intranet.service.HeatingService;
 import be.stijn.intranet.service.InputService;
+import be.stijn.intranet.service.MerkerService;
 import be.stijn.intranet.service.OutputService;
 
 @Controller
@@ -29,6 +32,8 @@ public class HeatingController {
 	private InputService inputService;
 	@Autowired
 	private HeatingService heatingService;
+	@Autowired
+	private MerkerService merkerService;
 
 	
 	@RequestMapping(value = { "/heating" }, method = RequestMethod.GET)
@@ -46,6 +51,12 @@ public class HeatingController {
 		model.addAttribute("input", input);
 		for(Input inp : input){
 			cmd.addPlcInputData(inp);
+		}
+		
+		List<Merker> merker = merkerService.getFilledPlcDataCommand();
+		model.addAttribute("merker", merker);
+		for(Merker merk : merker){
+			cmd.addPlcMerkerData(merk);
 		}
 				
 		model.addAttribute("command", cmd);
@@ -79,5 +90,11 @@ public class HeatingController {
 		heatingService.deleteHeating(heating);
 		return "/heating";
 	}
-
+	
+	@RequestMapping(value = { "/heating" }, method = RequestMethod.POST)
+	@ResponseBody
+	public boolean list(@RequestBody Merker merker, @ModelAttribute PlcDataCommand cmd, Model model){
+		merkerService.setMerker(merker.getNr(), merker.getValue());
+		return true;
+	}
 }

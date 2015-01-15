@@ -1728,13 +1728,32 @@ public final class lighting_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.jasper.runtime.AnnotationHelper.postConstruct(_jsp_annotationprocessor, _jspx_th_tiles_005fputAttribute_005f1);
     _jspx_th_tiles_005fputAttribute_005f1.setJspContext(_jspx_page_context);
     _jspx_th_tiles_005fputAttribute_005f1.setParent(_jspx_parent);
-    // /WEB-INF/views/lighting.jsp(258,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_tiles_005fputAttribute_005f1.setName("footer");
-    // /WEB-INF/views/lighting.jsp(258,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/views/lighting.jsp(237,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_tiles_005fputAttribute_005f1.setName("scripts");
+    // /WEB-INF/views/lighting.jsp(237,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_tiles_005fputAttribute_005f1.setCascade(true);
     _jspx_th_tiles_005fputAttribute_005f1.setJspBody(new Helper( 2, _jspx_page_context, _jspx_th_tiles_005fputAttribute_005f1, null));
     _jspx_th_tiles_005fputAttribute_005f1.doTag();
     org.apache.jasper.runtime.AnnotationHelper.preDestroy(_jsp_annotationprocessor, _jspx_th_tiles_005fputAttribute_005f1);
+    return false;
+  }
+
+  private boolean _jspx_meth_tiles_005fputAttribute_005f2(javax.servlet.jsp.tagext.JspTag _jspx_parent, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  tiles:putAttribute
+    org.apache.tiles.jsp.taglib.PutAttributeTag _jspx_th_tiles_005fputAttribute_005f2 = new org.apache.tiles.jsp.taglib.PutAttributeTag();
+    org.apache.jasper.runtime.AnnotationHelper.postConstruct(_jsp_annotationprocessor, _jspx_th_tiles_005fputAttribute_005f2);
+    _jspx_th_tiles_005fputAttribute_005f2.setJspContext(_jspx_page_context);
+    _jspx_th_tiles_005fputAttribute_005f2.setParent(_jspx_parent);
+    // /WEB-INF/views/lighting.jsp(258,1) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_tiles_005fputAttribute_005f2.setName("footer");
+    // /WEB-INF/views/lighting.jsp(258,1) name = cascade type = boolean reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_tiles_005fputAttribute_005f2.setCascade(true);
+    _jspx_th_tiles_005fputAttribute_005f2.setJspBody(new Helper( 3, _jspx_page_context, _jspx_th_tiles_005fputAttribute_005f2, null));
+    _jspx_th_tiles_005fputAttribute_005f2.doTag();
+    org.apache.jasper.runtime.AnnotationHelper.preDestroy(_jsp_annotationprocessor, _jspx_th_tiles_005fputAttribute_005f2);
     return false;
   }
 
@@ -1761,6 +1780,10 @@ public final class lighting_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_tiles_005fputAttribute_005f1(_jspx_parent, _jspx_page_context))
         return true;
       out.write('\n');
+      out.write('	');
+      if (_jspx_meth_tiles_005fputAttribute_005f2(_jspx_parent, _jspx_page_context))
+        return true;
+      out.write('\n');
       return false;
     }
     public boolean invoke1( JspWriter out ) 
@@ -1773,7 +1796,13 @@ public final class lighting_jsp extends org.apache.jasper.runtime.HttpJspBase
         return true;
       out.write("\n");
       out.write("\t\t</div>\n");
-      out.write("\t\t\n");
+      out.write("\t");
+      return false;
+    }
+    public boolean invoke2( JspWriter out ) 
+      throws Throwable
+    {
+      out.write("\n");
       out.write("\t\t<script type=\"text/javascript\">\n");
       out.write("\t\t\t$(\".slider\").on('switchChange.bootstrapSwitch', function (e, data){\n");
       out.write("\t\t\t\tvar nr = $(this).attr(\"id\");\n");
@@ -1793,11 +1822,10 @@ public final class lighting_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t});\n");
       out.write("\t\t\t});\n");
       out.write("\t\t</script>\n");
-      out.write("\t\t\n");
       out.write("\t");
       return false;
     }
-    public boolean invoke2( JspWriter out ) 
+    public boolean invoke3( JspWriter out ) 
       throws Throwable
     {
       out.write("\n");
@@ -1827,6 +1855,9 @@ public final class lighting_jsp extends org.apache.jasper.runtime.HttpJspBase
             break;
           case 2:
             invoke2( out );
+            break;
+          case 3:
+            invoke3( out );
             break;
         }
       }

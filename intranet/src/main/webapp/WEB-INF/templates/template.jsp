@@ -6,8 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/mystyle.css" type="text/css">
+
 <script type="text/JavaScript" src="javascript/jquery-1.9.1.min.js"></script>
+
 <link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css" type="text/css">
+<script type="text/javascript" src="javascript/jquery-ui-1.10.1.custom.min.js"></script>
 
 <link href="css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
 <script src="javascript/bootstrap-switch-3.0.2/dist/js/bootstrap-switch.js"></script>
@@ -15,11 +18,8 @@
 <link href="css/jquery.timepicker.css" rel="stylesheet">
 <script src="javascript/jquery-timepicker/jquery.timepicker.js"></script>
 
-<script type="text/javascript" src="javascript/jquery-ui-1.10.1.custom.min.js"></script>
-
 <script type="text/javascript" src="javascript/handlebars-v2.0.0.js"></script>
 
-<script type="text/javascript" src="javascript/heating/heatingAjax.js"></script>
 
 <script>
 	$(function() {

@@ -160,4 +160,22 @@ $(document).ready(
 							});
 				});
 			}
+			
+			$(".slider").on('switchChange.bootstrapSwitch', function (e, data){
+				var nr = $(this).attr("id");
+				var val = $(this).prop("checked");
+				console.log(nr);
+				console.log(val);
+				$.ajax({
+					type: "POST",
+					url: "heating",
+					data: JSON.stringify({nr: nr, value: val}),
+					dataType: "json",
+					contentType: 'application/json',
+					succes: function(){
+						alert("yes, it works");
+					},
+					error: function() {}
+				});
+			});
 		});

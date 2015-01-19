@@ -17,6 +17,9 @@ public class MerkerServiceImpl implements MerkerService{
 	
 	@Autowired
 	private MerkerDao merkerDao;
+	
+	@Autowired
+	private DeviceManager plc;
 
 	@Transactional
 	public List<Merker> findAll() {
@@ -34,9 +37,7 @@ public class MerkerServiceImpl implements MerkerService{
 	public List<Merker> getFilledPlcDataCommand() {
 		Merker merker = new Merker();
 		List<Merker> merkers = new ArrayList<Merker>();
-		
-		DeviceManager plc = new DeviceManager();
-		
+				
 		if (plc.connect().HasConnected()){
 			boolean resMer[] = plc.readRequest(eRegion.Flags_Markers);
 			for (int i = 0; i < resMer.length; ++i)

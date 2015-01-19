@@ -18,6 +18,9 @@ public class OutputServiceImpl implements OutputService {
 	@Autowired
 	private OutputDao outputDao;
 	
+	@Autowired
+	private DeviceManager plc;
+	
 	@Transactional
 	public List<Output> findAll() {
 		return outputDao.findAll();
@@ -29,12 +32,7 @@ public class OutputServiceImpl implements OutputService {
 		Output output = new Output();
 	    List<Output> outputs = new ArrayList<Output>();
 
-
-		DeviceManager plc = new DeviceManager();
-		//ConnectResult res = plc.connect();
-
 		if (plc.connect().HasConnected()){
-		//if (res.Quality().equals(OperationResult.eQuality.GOOD)) {
 			boolean resOut[] = plc.readRequest(eRegion.Output);
 			
 			for (int i = 0; i < resOut.length; ++i)

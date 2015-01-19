@@ -19,7 +19,7 @@ public class RunTask {
 	@Autowired
 	private HeatingDao heatingDao;
 	@Autowired
-	private DeviceManager deviceManager;
+	private DeviceManager plc;
 
 	@Scheduled(fixedDelay =  30 * 1000L)
 	@Transactional
@@ -71,7 +71,6 @@ public class RunTask {
 			break;
 			}
 			
-			DeviceManager plc = new DeviceManager();
 			String timeCutOn = heatingBlock.getStarttime().toLocalTime().toString().substring(0, 5);
 			String timeCutOff= heatingBlock.getStoptime().toLocalTime().toString().substring(0, 5);
 			

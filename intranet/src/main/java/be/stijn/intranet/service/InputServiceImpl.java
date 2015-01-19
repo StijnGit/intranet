@@ -17,6 +17,9 @@ public class InputServiceImpl implements InputService{
 	
 	@Autowired
 	private InputDao inputDao;
+	
+	@Autowired
+	private DeviceManager plc;
 
 	@Transactional
 	public List<Input> findAll() {
@@ -29,8 +32,6 @@ public class InputServiceImpl implements InputService{
 		Input input = new Input();
 	    List<Input> inputs = new ArrayList<Input>();
 
-
-		DeviceManager plc = new DeviceManager();
 		if (plc.connect().HasConnected()) {
 			boolean resIn[] = plc.readRequest(eRegion.Input);
 			

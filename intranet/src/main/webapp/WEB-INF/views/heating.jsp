@@ -25,7 +25,7 @@
 							<tr>
 								<td><c:out
 										value="Tijdsturing"></c:out></td>
-								<td><form:checkbox id="40" path="plcMerkerData[32].value"
+								<td><form:checkbox id="48" path="plcMerkerData[32].value"
 										cssClass="slider" /></td>
 							</tr>
 						</table>
@@ -46,7 +46,7 @@
 							<tr>
 								<td><c:out
 										value="Tijdsturing"></c:out></td>
-								<td><form:checkbox id="41" path="plcMerkerData[33].value"
+								<td><form:checkbox id="49" path="plcMerkerData[33].value"
 										cssClass="slider" /></td>
 							</tr>
 						</table>
@@ -67,7 +67,7 @@
 							<tr>
 								<td ><c:out
 										value="Tijdsturing"></c:out></td>
-								<td><form:checkbox id="42" path="plcMerkerData[34].value"
+								<td><form:checkbox id="50" path="plcMerkerData[34].value"
 										cssClass="slider" /></td>
 							</tr>
 						</table>

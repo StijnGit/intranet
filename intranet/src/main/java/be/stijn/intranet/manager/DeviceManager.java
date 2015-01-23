@@ -42,7 +42,7 @@ public class DeviceManager {
 			oRequestOut[0].setRegion(status);
 			oRequestOut[0].setDB(0);
 			oRequestOut[0].setStartByte(0);
-			oRequestOut[0].setLen(49);
+			oRequestOut[0].setLen(51);
 			oRequestOut[0].setBit((byte) 0);
 			oRequestOut[0].setIsBit(true);
 			return device.read(oRequestOut)[0].Bufferbool();

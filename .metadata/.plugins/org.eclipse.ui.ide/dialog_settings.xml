@@ -3,8 +3,11 @@
 	<list key="installedFeatures">
 		<item value="com.atlassian.connector.eclipse.jira:3.2.3.v20140630"/>
 		<item value="com.atlassian.connector.eclipse.monitor:3.2.3.v20140630"/>
-		<item value="org.aspectj:1.8.5.20141117171500"/>
-		<item value="org.eclipse.ajdt:2.2.4.e44x-20141118-0700"/>
+		<item value="com.objectaid.uml.addon:1.1.8"/>
+		<item value="com.objectaid.uml.cls:1.1.8"/>
+		<item value="com.objectaid.uml.seq:1.1.8"/>
+		<item value="org.aspectj:1.8.5.20141218084900"/>
+		<item value="org.eclipse.ajdt:2.2.4.e44x-20141218-0900"/>
 		<item value="org.eclipse.cvs:1.4.100.v20140925-0400"/>
 		<item value="org.eclipse.datatools.common.doc.user:1.12.0.v201405281819-26-311A16321A3557"/>
 		<item value="org.eclipse.datatools.connectivity.doc.user:1.12.0.v201405281819-37D-7733L3D753L7BBF"/>
@@ -133,8 +136,8 @@
 		<item value="org.springframework.ide.eclipse.security.feature:3.6.3.201411271034-RELEASE"/>
 		<item value="org.springframework.ide.eclipse.uaa.feature:3.6.3.201411271002-RELEASE"/>
 		<item value="org.springframework.ide.eclipse.webflow.feature:3.6.3.201411271034-RELEASE"/>
-		<item value="org.springsource.sts.package:3.6.3.201411281415-RELEASE-e44"/>
-		<item value="org.springsource.sts:3.6.3.201411281415-RELEASE"/>
+		<item value="org.springsource.sts.package:3.6.3.201501121239-SR1-e44"/>
+		<item value="org.springsource.sts:3.6.3.201501121239-SR1"/>
 	</list>
 	<section name="CleanDialogSettings">
 		<item value="484" key="DIALOG_WIDTH"/>

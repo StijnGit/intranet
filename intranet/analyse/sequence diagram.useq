@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.8" icons="true">  
+  <object id="1" language="java" name="be.stijn.intranet.controller.HeatingController" project="intranet" 
+    file="/intranet/src/main/java/be/stijn/intranet/controller/HeatingController.java" binary="false" 
+    label="heatingController" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="338" y="0"/>    
+    <execution id="2">      
+      <position height="105" width="144" x="5" y="127"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="105" width="144" x="5" y="300"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="105" width="144" x="5" y="468"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="105" width="144" x="5" y="635"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="be.stijn.intranet.service.HeatingService" project="intranet" 
+    file="/intranet/src/main/java/be/stijn/intranet/service/HeatingService.java" binary="false" label="heatingService" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="232" y="0"/>    
+    <execution id="4">      
+      <position height="63" width="126" x="153" y="148"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="63" width="126" x="153" y="321"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="63" width="126" x="153" y="489"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="63" width="126" x="153" y="656"/>    
+    </execution>  
+  </object>  
+  <object id="23" language="java" name="be.stijn.intranet.dao.HeatingDao" project="intranet" 
+    file="/intranet/src/main/java/be/stijn/intranet/dao/HeatingDao.java" binary="false" label="heatingDao" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="386" y="0"/>    
+    <execution id="16">      
+      <position height="21" width="103" x="283" y="169"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="21" width="103" x="283" y="342"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="21" width="103" x="283" y="510"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="21" width="103" x="283" y="677"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="addHeating(be.stijn.intranet.model.Heating):void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="deleteHeating(be.stijn.intranet.model.Heating):void">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9" operation="editHeating(be.stijn.intranet.model.Heating):void">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" operation="findByZone(java.lang.String):java.util.List&lt;Heating&gt;">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15" operation="addHeating(be.stijn.intranet.model.Heating):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="deleteHeating(be.stijn.intranet.model.Heating):void">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="editHeating(be.stijn.intranet.model.Heating):void">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="findByZone(java.lang.String):java.util.List&lt;Heating&gt;">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>
+</sequence-diagram>

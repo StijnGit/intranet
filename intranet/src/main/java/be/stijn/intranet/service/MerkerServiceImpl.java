@@ -124,7 +124,7 @@ public class MerkerServiceImpl implements MerkerService{
 				
 		DeviceManager plc = new DeviceManager();
 		if (plc.connect().HasConnected()){
-			plc.writeRequest(eRegion.Flags_Markers, merker.getWord(), bitNr, true);
+			plc.writeRequest(eRegion.Flags_Markers, merker.getWord(), bitNr, value);
 		}
 		plc.disconnect();
 		
